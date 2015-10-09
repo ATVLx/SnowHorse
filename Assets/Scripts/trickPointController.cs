@@ -32,7 +32,7 @@ public class trickPointController : MonoBehaviour {
 	
 	}
 
-    public void popPointsTimer(string trickName, int pointValue)
+    public void popPointsTimer(string trickName, int pointValue, Color textColor)
     {
         //check to see if the UI is already up
         if (hasTimer == false)
@@ -41,18 +41,18 @@ public class trickPointController : MonoBehaviour {
             PointsPanel.SetActive(true);
         }
 
+        m_TrickNameText.color = textColor;
+
         //reset the timer because we did a new trick
         m_Timer = m_RecoveryTimer;
 
-        //multiple the points
-        //pointValue += pointValue;
-
         //set the point value
-        m_TrickPointText.text = pointValue + " x 1";
+        m_TrickPointText.text = m_Points + " x 1";
         //set the trick name
         m_TrickNameText.text = trickName;
         //start the countdown timer
         canCountdown = true;
+
         //add the points value
         m_Points += pointValue;
 

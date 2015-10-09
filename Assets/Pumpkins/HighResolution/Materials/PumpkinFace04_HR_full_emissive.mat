@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: PumpkinFace04_HR_full_emissive
+  m_Shader: {fileID: 4800000, guid: 781715f9050128c4290e95699f54ca62, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Diffuse_and_Emissive_alpha
+        second:
+          m_Texture: {fileID: 2800000, guid: afdc2f81beb36394db8f87347be3c746, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Specular
+        second:
+          m_Texture: {fileID: 2800000, guid: bd1d9af726e145944bbbec1da7e26b90, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Normal
+        second:
+          m_Texture: {fileID: 2800000, guid: 3ac22803d320e6446a9c084f91fd25b3, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Gloss
+        second: .0892857164
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _EmissiveColor
+        second: {r: .995537519, g: 1, b: .676470578, a: 1}

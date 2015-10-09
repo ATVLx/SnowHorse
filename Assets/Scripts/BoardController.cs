@@ -18,6 +18,7 @@ public class BoardController : MonoBehaviour {
 
     [Header("Air Settings")]
     public bool isGrounded = false;
+    public float jumpHeight = 400;
 
     [Header("Animation Settings")]
     public Animator _anim;
@@ -52,7 +53,7 @@ public class BoardController : MonoBehaviour {
                 {
                     //give rail points
                     hasGivenRailPoints = true;
-                    _trickController.popPointsTimer("Hay Slide", 3400);
+                    _trickController.popPointsTimer("Hay Slide", 3400, Color.black);
                 }
                 
             }
@@ -100,8 +101,7 @@ public class BoardController : MonoBehaviour {
         {
             if (isGrounded == true)
             {
-                _rigid.AddForce(Vector3.up * 800);
-                //Debug.Log("Angle: " + transform.eulerAngles.ToString());
+                _rigid.AddForce(Vector3.up * jumpHeight);
                 //Debug.Log("Jump");
             }
         }
@@ -110,29 +110,29 @@ public class BoardController : MonoBehaviour {
     private void trickControls()
     {
 
-        if (XboxOneInput.GetKeyDown(XboxOneKeyCode.Gamepad1ButtonB))
+        if (XboxOneInput.GetKeyDown(XboxOneKeyCode.Gamepad1ButtonB) || Input.GetKeyDown(KeyCode.L))
         {
             //base right trick
             _anim.SetTrigger("baseRight");
-            _trickController.popPointsTimer("Horse Kick!", 1000);
+            _trickController.popPointsTimer("Horse Kick!", 1000, Color.green);
         }
-        else if (XboxOneInput.GetKeyDown(XboxOneKeyCode.Gamepad1ButtonX))
+        else if (XboxOneInput.GetKeyDown(XboxOneKeyCode.Gamepad1ButtonX) || Input.GetKeyDown(KeyCode.J))
         {
             //base left trick
             _anim.SetTrigger("baseLeft");
-            _trickController.popPointsTimer("Attack!", 2000);
+            _trickController.popPointsTimer("Attack!", 2000, Color.yellow);
         }
-        else if (XboxOneInput.GetKeyDown(XboxOneKeyCode.Gamepad1ButtonY))
+        else if (XboxOneInput.GetKeyDown(XboxOneKeyCode.Gamepad1ButtonY) || Input.GetKeyDown(KeyCode.I))
         {
             //base up trick
             _anim.SetTrigger("baseUp");
-            _trickController.popPointsTimer("Nose Up!", 2300);
+            _trickController.popPointsTimer("Nose Up!", 2300, Color.yellow);
         }
-        else if (XboxOneInput.GetKeyDown(XboxOneKeyCode.Gamepad1ButtonA))
+        else if (XboxOneInput.GetKeyDown(XboxOneKeyCode.Gamepad1ButtonA) || Input.GetKeyDown(KeyCode.K))
         {
             //base down trick
             _anim.SetTrigger("baseDown");
-            _trickController.popPointsTimer("Tail Wag!", 1000);
+            _trickController.popPointsTimer("Tail Wag!", 1000, Color.green);
         }
 
     }

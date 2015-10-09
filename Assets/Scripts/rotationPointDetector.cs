@@ -3,9 +3,10 @@ using System.Collections;
 
 public class rotationPointDetector : MonoBehaviour {
 
-    public float hAxis;
-    private float mTimer = 1.0f, mRecoveryTimer;
+    private float hAxis;
+    private float mTimer = 0.5f, mRecoveryTimer;
     public trickPointController m_trickController;
+    public BoardController m_boardController;
 
 	// Use this for initialization
 	void Start () {
@@ -18,13 +19,17 @@ public class rotationPointDetector : MonoBehaviour {
 
         hAxis = Input.GetAxis("Horizontal");
 
-        if (hAxis > 0.4)
+        //check if the player is grounded
+        if (m_boardController.isGrounded == false)
         {
-            pointTimer();
-        }
-        else if (hAxis < -0.4)
-        {
-            pointTimer();
+            if (hAxis > 0.4)
+            {
+                pointTimer();
+            }
+            else if (hAxis < -0.4)
+            {
+                pointTimer();
+            }
         }
 
 	}
@@ -36,7 +41,7 @@ public class rotationPointDetector : MonoBehaviour {
         if (mTimer < 0)
         {
             mTimer = mRecoveryTimer;
-            m_trickController.popPointsTimer("Horse Spinner", 1000);
+            m_trickController.popPointsTimer("Horse Spinner", 1000, Color.blue);
             //Debug.Log("add points");
         }
     }
