@@ -44,6 +44,9 @@ public class trickPointController : MonoBehaviour {
         //reset the timer because we did a new trick
         m_Timer = m_RecoveryTimer;
 
+        //multiple the points
+        //pointValue += pointValue;
+
         //set the point value
         m_TrickPointText.text = pointValue + " x 1";
         //set the trick name

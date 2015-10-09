@@ -102,7 +102,7 @@ public class BoardController : MonoBehaviour {
             {
                 _rigid.AddForce(Vector3.up * 800);
                 //Debug.Log("Angle: " + transform.eulerAngles.ToString());
-                Debug.Log("Jump");
+                //Debug.Log("Jump");
             }
         }
     }
