@@ -47,7 +47,7 @@ public class trickPointController : MonoBehaviour {
         m_Timer = m_RecoveryTimer;
 
         //set the point value
-        m_TrickPointText.text = m_Points + " x 1";
+        m_TrickPointText.text = pointValue + " x 1";
         //set the trick name
         m_TrickNameText.text = trickName;
         //start the countdown timer
