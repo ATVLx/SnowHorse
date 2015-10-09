@@ -101,7 +101,7 @@ public class BoardController : MonoBehaviour {
             if (isGrounded == true)
             {
                 _rigid.AddForce(Vector3.up * 800);
-                Debug.Log("Angle: " + transform.eulerAngles.ToString());
+                //Debug.Log("Angle: " + transform.eulerAngles.ToString());
                 Debug.Log("Jump");
             }
         }
