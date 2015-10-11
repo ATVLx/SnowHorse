@@ -97,6 +97,8 @@ public class BoardController : MonoBehaviour {
 
     private void JumpControls()
     {
+#if UNITY_XBOXONE
+
         if (XboxOneInput.GetKeyDown(XboxOneKeyCode.Gamepad1ButtonA) || Input.GetKeyDown(KeyCode.Space))
         {
             if (isGrounded == true)
@@ -105,10 +107,28 @@ public class BoardController : MonoBehaviour {
                 //Debug.Log("Jump");
             }
         }
-    }
+    
+#endif
+
+#if UNITY_STANDALONE
+
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			if (isGrounded == true)
+			{
+				_rigid.AddForce(Vector3.up * jumpHeight);
+				//Debug.Log("Jump");
+			}
+		}
+#endif
+
+	}
+
 
     private void trickControls()
     {
+
+#if UNITY_XBOXONE
 
         if (XboxOneInput.GetKeyDown(XboxOneKeyCode.Gamepad1ButtonB) || Input.GetKeyDown(KeyCode.L))
         {
@@ -134,6 +154,37 @@ public class BoardController : MonoBehaviour {
             _anim.SetTrigger("baseDown");
             _trickController.popPointsTimer("Tail Wag!", 1000, Color.green);
         }
+
+#endif
+
+#if UNITY_STANDALONE
+
+		if (Input.GetKeyDown(KeyCode.L))
+		{
+			//base right trick
+			_anim.SetTrigger("baseRight");
+			_trickController.popPointsTimer("Horse Kick!", 1000, Color.green);
+		}
+		else if (Input.GetKeyDown(KeyCode.J))
+		{
+			//base left trick
+			_anim.SetTrigger("baseLeft");
+			_trickController.popPointsTimer("Attack!", 2000, Color.yellow);
+		}
+		else if (Input.GetKeyDown(KeyCode.I))
+		{
+			//base up trick
+			_anim.SetTrigger("baseUp");
+			_trickController.popPointsTimer("Nose Up!", 2300, Color.yellow);
+		}
+		else if (Input.GetKeyDown(KeyCode.K))
+		{
+			//base down trick
+			_anim.SetTrigger("baseDown");
+			_trickController.popPointsTimer("Tail Wag!", 1000, Color.green);
+		}
+
+#endif
 
     }
 
