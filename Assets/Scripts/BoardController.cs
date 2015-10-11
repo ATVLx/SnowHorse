@@ -41,11 +41,14 @@ public class BoardController : MonoBehaviour {
         rightHAxis = Input.GetAxis("Horizontal2");
         rightVAxis = Input.GetAxis("Vertical2");
 
-
+		//check to see if we are touching the ground or a rail
         RaycastHit hit;
         Debug.DrawRay(transform.position, -Vector3.up * rayDistance, Color.green);
         if (Physics.Raycast(transform.position, -Vector3.up, out hit, rayDistance))
         {
+			//HIT SOMETHING
+
+			//Did we hit a rail?
             if (hit.transform.tag == "Rail")
             {
                 isGrounded = false;
@@ -59,7 +62,11 @@ public class BoardController : MonoBehaviour {
             }
             else
             {
+				//No we didn't hit a rail! We touched the ground!!
                 _trickController.endTrickTimer();
+				_trickController.m_trickValue = 0;
+				_trickController.m_numOfTricks = 1;
+
                 isGrounded = true;
                 //give back rail point privledges since we have landed
                 hasGivenRailPoints = false;

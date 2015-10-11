@@ -490,6 +490,7 @@ GameObject:
   - 92: {fileID: 422432963}
   - 124: {fileID: 422432962}
   - 81: {fileID: 422432961}
+  - 45: {fileID: 422432966}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -564,6 +565,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!45 &422432966
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 422432960}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 20e05688c23ec244e9a4ccc7654c6afe, type: 2}
 --- !u!1 &451320115
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,8 +835,20 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 5454614, guid: eb44f556d92f5ed419cb83d3cf2600c6, type: 2}
     - {fileID: 11471924, guid: eb44f556d92f5ed419cb83d3cf2600c6, type: 2}
+    - {fileID: 3324536, guid: eb44f556d92f5ed419cb83d3cf2600c6, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: eb44f556d92f5ed419cb83d3cf2600c6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &729146442 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 107134, guid: eb44f556d92f5ed419cb83d3cf2600c6, type: 2}
+  m_PrefabInternal: {fileID: 539190179}
+--- !u!33 &729146443
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 729146442}
+  m_Mesh: {fileID: 0}
 --- !u!1 &745638833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,29 +1260,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 941133090}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1264598868}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &941133090

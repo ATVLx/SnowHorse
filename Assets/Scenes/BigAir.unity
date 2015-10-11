@@ -710,7 +710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &376231435
 Transform:
   m_ObjectHideFlags: 0
@@ -1026,6 +1026,8 @@ MonoBehaviour:
   PointsPanel: {fileID: 385588891}
   canCountdown: 0
   hasTimer: 0
+  m_trickValue: 0
+  m_numOfTricks: 1
 --- !u!1 &460582365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,8 +1276,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 501527713}
-  m_LocalRotation: {x: .570106745, y: -.484004557, z: -.235273615, w: .62077719}
-  m_LocalPosition: {x: 16.7999992, y: 19.7999992, z: 0}
+  m_LocalRotation: {x: .698883295, y: -.266165644, z: -.0147759933, w: .663701594}
+  m_LocalPosition: {x: 16.7999992, y: 334, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2263,6 +2265,8 @@ GameObject:
   - 124: {fileID: 998444349}
   - 81: {fileID: 998444348}
   - 114: {fileID: 998444353}
+  - 45: {fileID: 998444354}
+  - 114: {fileID: 998444355}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2351,6 +2355,28 @@ MonoBehaviour:
   m_Board: {fileID: 584467811}
   m_Offset: {x: 3, y: 3.20000005, z: 0}
   jumpHeight: 10
+--- !u!45 &998444354
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 998444347}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 20e05688c23ec244e9a4ccc7654c6afe, type: 2}
+--- !u!114 &998444355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 998444347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4739c22ef73ad62488fe344c8fe9addd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strengthX: .270999998
+  strengthY: .270999998
+  fishEyeShader: {fileID: 4800000, guid: 874ceab4425f64bccb1d14032f4452b1, type: 3}
 --- !u!1 &1071109503
 GameObject:
   m_ObjectHideFlags: 0
@@ -2928,7 +2954,8 @@ Prefab:
       propertyPath: jumpHeight
       value: 300
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3324536, guid: eb44f556d92f5ed419cb83d3cf2600c6, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: eb44f556d92f5ed419cb83d3cf2600c6, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1302157173
@@ -3917,6 +3944,76 @@ Transform:
   m_Children: []
   m_Father: {fileID: 376231435}
   m_RootOrder: 24
+--- !u!1 &1629529891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1629529894}
+  - 218: {fileID: 1629529893}
+  - 154: {fileID: 1629529892}
+  m_Layer: 0
+  m_Name: Terrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!154 &1629529892
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1629529891}
+  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_TerrainData: {fileID: 15600000, guid: 03a8e71fda244bb42b549c784c8bf694, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!218 &1629529893
+Terrain:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1629529891}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_TerrainData: {fileID: 15600000, guid: 03a8e71fda244bb42b549c784c8bf694, type: 2}
+  m_TreeDistance: 5000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMaximumLOD: 0
+  m_CastShadows: 1
+  m_DrawHeightmap: 1
+  m_DrawTreesAndFoliage: 1
+  m_ReflectionProbeUsage: 1
+  m_MaterialType: 0
+  m_LegacySpecular:
+    serializedVersion: 2
+    rgba: 4286545791
+  m_LegacyShininess: .078125
+  m_MaterialTemplate: {fileID: 0}
+  m_BakeLightProbesForTrees: 1
+  m_ScaleInLightmap: .0127999997
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+--- !u!4 &1629529894
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1629529891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -829, y: -262.600006, z: -1106}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &1683958770
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,6 +18,9 @@ public class trickPointController : MonoBehaviour {
     private float m_RecoveryTimer = 4.0f;
     public bool hasTimer = false;
 
+	[Header("Trick Settings")]
+	public int m_trickValue;
+	public int m_numOfTricks = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -43,11 +46,15 @@ public class trickPointController : MonoBehaviour {
 
         m_TrickNameText.color = textColor;
 
+		//add the points to the trick value
+		m_trickValue += pointValue;
+		m_numOfTricks++;
+
         //reset the timer because we did a new trick
         m_Timer = m_RecoveryTimer;
 
         //set the point value
-        m_TrickPointText.text = pointValue + " x 1";
+        m_TrickPointText.text = m_trickValue + " x " + m_numOfTricks;
         //set the trick name
         m_TrickNameText.text = trickName;
         //start the countdown timer
