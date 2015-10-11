@@ -6,9 +6,6 @@ public class cameraController : MonoBehaviour {
     public GameObject m_Board;
     public Vector3 m_Offset;
 
-    [Header("Jump Settings")]
-    public float jumpHeight = 10.0f;
-
 	// Use this for initialization
 	void Start () {
 	

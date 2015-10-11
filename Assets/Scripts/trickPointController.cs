@@ -61,7 +61,7 @@ public class trickPointController : MonoBehaviour {
         canCountdown = true;
 
         //add the points value
-        m_Points += pointValue;
+        m_Points = (pointValue * m_numOfTricks);
 
     }
 

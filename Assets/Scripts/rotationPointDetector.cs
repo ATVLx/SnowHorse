@@ -3,7 +3,7 @@ using System.Collections;
 
 public class rotationPointDetector : MonoBehaviour {
 
-    private float hAxis;
+    private float hAxis, vAxis;
     private float mTimer = 0.5f, mRecoveryTimer;
     public trickPointController m_trickController;
     public BoardController m_boardController;
@@ -18,20 +18,42 @@ public class rotationPointDetector : MonoBehaviour {
 	void Update () {
 
         hAxis = Input.GetAxis("Horizontal");
+		vAxis = Input.GetAxis("Vertical");
 
         //check if the player is grounded
         if (m_boardController.isGrounded == false)
         {
-            if (hAxis > 0.4)
-            {
-                pointTimer();
-            }
-            else if (hAxis < -0.4)
-            {
-                pointTimer();
-            }
+			//spinning
+			spinningDetection();
+			//flipping rotation
+			flippingDetection();
+
         }
 
+	}
+
+	private void flippingDetection()
+	{
+		if (vAxis > 0.4)
+		{
+			pointTimer();
+		}
+		else if (vAxis < -0.4)
+		{
+			pointTimer();
+		}
+	}
+
+	private void spinningDetection()
+	{
+		if (hAxis > 0.4)
+		{
+			pointTimer();
+		}
+		else if (hAxis < -0.4)
+		{
+			pointTimer();
+		}
 	}
 
     private void pointTimer()

@@ -7,6 +7,7 @@ public class BoardController : MonoBehaviour {
     private float hAxis, vAxis, rightHAxis, rightVAxis;
     private Rigidbody _rigid;
     public float torque = 150.0f;
+	public float flippingTorque = 100.0f;
     private Transform startPosition;
 
     [Header("Trick Settings")]
@@ -68,6 +69,7 @@ public class BoardController : MonoBehaviour {
 				_trickController.m_numOfTricks = 1;
 
                 isGrounded = true;
+
                 //give back rail point privledges since we have landed
                 hasGivenRailPoints = false;
             }
@@ -95,8 +97,6 @@ public class BoardController : MonoBehaviour {
             JumpControls();
 
             _rigid.angularVelocity = Vector3.zero;
-            //move on the ground code goes here
-            //groundMovement();
 
         }
 
@@ -111,6 +111,7 @@ public class BoardController : MonoBehaviour {
             if (isGrounded == true)
             {
                 _rigid.AddForce(Vector3.up * jumpHeight);
+				`
                 //Debug.Log("Jump");
             }
         }
@@ -124,6 +125,7 @@ public class BoardController : MonoBehaviour {
 			if (isGrounded == true)
 			{
 				_rigid.AddForce(Vector3.up * jumpHeight);
+
 				//Debug.Log("Jump");
 			}
 		}
@@ -196,30 +198,6 @@ public class BoardController : MonoBehaviour {
     }
 
     /// <summary>
-    /// the ground control 
-    /// </summary>
-    private void groundMovement()
-    {
-        //rotate left or right
-        if (hAxis > 0.4f)
-        {
-            //rotate right
-            _rigid.AddForce(Vector3.forward * 5);
-        }
-        else if (hAxis < -0.4f)
-        {
-            //rotate left
-            _rigid.AddForce(-Vector3.forward * 5);
-        }
-        else
-        {
-            //stop rotating
-            //_rigid.velocity = Vector3.zero;
-
-        }
-    }
-
-    /// <summary>
     /// Control the board to rotate
     /// </summary>
     private void rotateControl()
@@ -228,12 +206,12 @@ public class BoardController : MonoBehaviour {
         if (hAxis > 0.4f)
         {
             //rotate right
-            _rigid.AddTorque(transform.up * torque * hAxis);
+            _rigid.AddTorque(transform.up * torque);
         }
         else if (hAxis < -0.4f)
         {
             //rotate left
-            _rigid.AddTorque(-transform.up * -torque * hAxis);
+            _rigid.AddTorque(-transform.up * torque);
         }
         else
         {
@@ -250,13 +228,13 @@ public class BoardController : MonoBehaviour {
     {
         if (vAxis > 0.4f)
         {
-            //rotate right
-            _rigid.AddTorque(transform.forward * torque * vAxis);
+            //rotate forward
+            _rigid.AddTorque(transform.forward * flippingTorque);
         }
         else if (vAxis < -0.4f)
         {
-            //rotate left
-            _rigid.AddTorque(-transform.forward * -torque * vAxis);
+            //rotate back
+            _rigid.AddTorque(-transform.forward * flippingTorque);
         }
         else
         {
