@@ -2491,13 +2491,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1071109503}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: .753000021}
+  m_Color: {r: 0, g: 0, b: 0, a: .753000021}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3036,11 +3036,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11471924, guid: eb44f556d92f5ed419cb83d3cf2600c6, type: 2}
       propertyPath: torque
-      value: 30
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 11471924, guid: eb44f556d92f5ed419cb83d3cf2600c6, type: 2}
       propertyPath: flippingTorque
-      value: 30
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3324536, guid: eb44f556d92f5ed419cb83d3cf2600c6, type: 2}

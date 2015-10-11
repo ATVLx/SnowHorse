@@ -24,6 +24,9 @@ public class BoardController : MonoBehaviour {
     [Header("Animation Settings")]
     public Animator _anim;
 
+	[Header("One Time Air Events")]
+	public bool oneTimeEvents = false;
+
 	// Use this for initialization
 	void Start () {
 
@@ -63,15 +66,16 @@ public class BoardController : MonoBehaviour {
             }
             else
             {
+
 				//No we didn't hit a rail! We touched the ground!!
                 _trickController.endTrickTimer();
 				_trickController.m_trickValue = 0;
 				_trickController.m_numOfTricks = 1;
-
                 isGrounded = true;
 
                 //give back rail point privledges since we have landed
                 hasGivenRailPoints = false;
+
             }
         }
         else
@@ -111,7 +115,7 @@ public class BoardController : MonoBehaviour {
             if (isGrounded == true)
             {
                 _rigid.AddForce(Vector3.up * jumpHeight);
-				`
+
                 //Debug.Log("Jump");
             }
         }
@@ -171,6 +175,7 @@ public class BoardController : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.L))
 		{
 			//base right trick
+			Debug.Log("Animation isn't playing");
 			_anim.SetTrigger("baseRight");
 			_trickController.popPointsTimer("Horse Kick!", 1000, Color.green);
 		}
