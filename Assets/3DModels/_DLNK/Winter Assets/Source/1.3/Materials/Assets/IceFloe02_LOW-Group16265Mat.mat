@@ -1,0 +1,358 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: IceFloe02_LOW-Group16265Mat
+  m_Shader: {fileID: 4800000, guid: f1e6229716f57f1419d9923e45dfcbd9, type: 3}
+  m_ShaderKeywords: _COLORDETAIL_ON _PARALLAXON_ON _RIMAO_ON _RIMON_ON _SPECULARAO_ON
+    _USENORMALDETAIL_ON
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: c51a349be3fe17d4b941428290b6dbbf, type: 3}
+          m_Scale: {x: 2, y: 2}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 163123f5fc1136345aed0beb51bf6358, type: 3}
+          m_Scale: {x: 2, y: 2}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _OcclusionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SpecularMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _HeightMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DifuseMain
+        second:
+          m_Texture: {fileID: 2800000, guid: c51a349be3fe17d4b941428290b6dbbf, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _IBLSpecular
+        second:
+          m_Texture: {fileID: 8900000, guid: 9b2d3ffa79837de4eb9a3cc995c07db3, type: 2}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _IBLDiffuse
+        second:
+          m_Texture: {fileID: 8900000, guid: 9b2d3ffa79837de4eb9a3cc995c07db3, type: 2}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DiffuseSide
+        second:
+          m_Texture: {fileID: 2800000, guid: c51a349be3fe17d4b941428290b6dbbf, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _NormalSide
+        second:
+          m_Texture: {fileID: 2800000, guid: f921e25dd77772543a6f9123b6dae704, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DiffuseUp
+        second:
+          m_Texture: {fileID: 2800000, guid: 35855a91f15f0084397d71ec97b7d90d, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _NormalUp
+        second:
+          m_Texture: {fileID: 2800000, guid: fec84a827e085b34cbb800d5b17da482, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Oclussion
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _TopTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _TopBump
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DiffuseDetail
+        second:
+          m_Texture: {fileID: 2800000, guid: 4283782af33e69244b154eed01465b4d, type: 3}
+          m_Scale: {x: 5, y: 5}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MainNormal
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailNormal
+        second:
+          m_Texture: {fileID: 2800000, guid: 163123f5fc1136345aed0beb51bf6358, type: 3}
+          m_Scale: {x: 5, y: 5}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: .5
+      data:
+        first:
+          name: _Shininess
+        second: .554625213
+      data:
+        first:
+          name: _Gloss
+        second: .339285731
+      data:
+        first:
+          name: _MainTiling
+        second: 1
+      data:
+        first:
+          name: _BumpPower
+        second: 0
+      data:
+        first:
+          name: _SpecularPower
+        second: .540000021
+      data:
+        first:
+          name: _SpecularLevel
+        second: 1.16071427
+      data:
+        first:
+          name: _OclussionPower
+        second: -5
+      data:
+        first:
+          name: _SpecularIntensityIBL
+        second: 4.90999985
+      data:
+        first:
+          name: _DifuseIntensityIBL
+        second: 1
+      data:
+        first:
+          name: _SmoothDiffuseIBL
+        second: 7.28571415
+      data:
+        first:
+          name: _DiffuseRim
+        second: 1.15999997
+      data:
+        first:
+          name: _TransparentMix
+        second: .660714328
+      data:
+        first:
+          name: _AOPower
+        second: 1
+      data:
+        first:
+          name: _TopDownMask
+        second: .821428597
+      data:
+        first:
+          name: _1stVelocity
+        second: .100000001
+      data:
+        first:
+          name: _2ndVelocity
+        second: 1
+      data:
+        first:
+          name: _UpVelocity
+        second: 0
+      data:
+        first:
+          name: _UpMoveRange
+        second: 0
+      data:
+        first:
+          name: _RefractionPower
+        second: .0199999996
+      data:
+        first:
+          name: _OpacityPower
+        second: 1.70000005
+      data:
+        first:
+          name: _FresnelPower
+        second: -.99000001
+      data:
+        first:
+          name: _FresnelRim
+        second: .879999995
+      data:
+        first:
+          name: _UpmoveMix
+        second: 0
+      data:
+        first:
+          name: _RimPower
+        second: .214285702
+      data:
+        first:
+          name: _ParallaxOn
+        second: 1
+      data:
+        first:
+          name: _MasterTile
+        second: 1
+      data:
+        first:
+          name: _TopSpecularPower
+        second: 1
+      data:
+        first:
+          name: _TopShininess
+        second: .5
+      data:
+        first:
+          name: _TopBottomLevel
+        second: 1
+      data:
+        first:
+          name: _AOBlendPower
+        second: 1
+      data:
+        first:
+          name: _AffectAO
+        second: 0
+      data:
+        first:
+          name: _ColorDetail
+        second: 1
+      data:
+        first:
+          name: _DifusePower
+        second: 3
+      data:
+        first:
+          name: _DetailPower
+        second: .857142866
+      data:
+        first:
+          name: _UseNormalDetail
+        second: 1
+      data:
+        first:
+          name: _UseDetailAlpha
+        second: 0
+      data:
+        first:
+          name: _SpecularAO
+        second: 1
+      data:
+        first:
+          name: _UseSpecularMap
+        second: 0
+      data:
+        first:
+          name: _HeightPower
+        second: .00999999978
+      data:
+        first:
+          name: _OclussionFade
+        second: 2.67857146
+      data:
+        first:
+          name: _OclussionIntensity
+        second: 0
+      data:
+        first:
+          name: _RimOn
+        second: 1
+      data:
+        first:
+          name: _RimAO
+        second: 1
+      data:
+        first:
+          name: _RimFresnel
+        second: 3.21428585
+      data:
+        first:
+          name: _Refraction
+        second: .0599999987
+      data:
+        first:
+          name: _NormalRefraction
+        second: .0900000036
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: .727941155, g: .727941155, b: .727941155, a: .145098045}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _ColorTint
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _SpecularTint
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _TopColor
+        second: {r: .5, g: .5, b: .5, a: 1}
+      data:
+        first:
+          name: _RimColor
+        second: {r: .483564019, g: .515374064, b: .632352948, a: 1}

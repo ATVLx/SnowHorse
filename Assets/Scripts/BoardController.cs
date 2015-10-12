@@ -175,7 +175,6 @@ public class BoardController : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.L))
 		{
 			//base right trick
-			Debug.Log("Animation isn't playing");
 			_anim.SetTrigger("baseRight");
 			_trickController.popPointsTimer("Horse Kick!", 1000, Color.green);
 		}

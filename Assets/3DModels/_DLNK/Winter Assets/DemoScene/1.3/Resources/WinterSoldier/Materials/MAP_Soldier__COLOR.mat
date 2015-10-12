@@ -1,0 +1,227 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: MAP_Soldier__COLOR
+  m_Shader: {fileID: 4800000, guid: f7ceaa8816127814f8735804746f75a5, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: e35e61b8939d9154eaaceb28264b7f93, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: b2abf0aab85c7e544b3ffcbe2106c7f3, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _NormalMap
+        second:
+          m_Texture: {fileID: 2800000, guid: b2abf0aab85c7e544b3ffcbe2106c7f3, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DiffuseMap
+        second:
+          m_Texture: {fileID: 2800000, guid: e35e61b8939d9154eaaceb28264b7f93, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SpecularMap
+        second:
+          m_Texture: {fileID: 2800000, guid: e35e61b8939d9154eaaceb28264b7f93, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _GlossMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _OclussionMap
+        second:
+          m_Texture: {fileID: 2800000, guid: b974e13606606ef44a02e9107bf47db8, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Illum
+        second:
+          m_Texture: {fileID: 2800000, guid: bcd6a5bf373a139488e0afb04ca6d1b7, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _CustomAmbient
+        second:
+          m_Texture: {fileID: 2800000, guid: bcd6a5bf373a139488e0afb04ca6d1b7, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Diffuse
+        second:
+          m_Texture: {fileID: 2800000, guid: e35e61b8939d9154eaaceb28264b7f93, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _TMAP
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AO
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Shininess
+        second: -.550000012
+      data:
+        first:
+          name: _Gloss
+        second: .0892857164
+      data:
+        first:
+          name: _MainTiling
+        second: 1
+      data:
+        first:
+          name: _BumpPower
+        second: 0
+      data:
+        first:
+          name: _SpecularPower
+        second: 1
+      data:
+        first:
+          name: _NormalSmooth
+        second: -1
+      data:
+        first:
+          name: _SpecularLevel
+        second: 4
+      data:
+        first:
+          name: _UseGlossMap
+        second: 0
+      data:
+        first:
+          name: _OclussionPower
+        second: .769999981
+      data:
+        first:
+          name: _EmissionLM
+        second: 12.7799997
+      data:
+        first:
+          name: _RimPower
+        second: 1
+      data:
+        first:
+          name: _RimLevel
+        second: -.200000003
+      data:
+        first:
+          name: _TexturePower
+        second: 1
+      data:
+        first:
+          name: _SceneCustomAmbient
+        second: 0
+      data:
+        first:
+          name: _TransPower
+        second: 2.21000004
+      data:
+        first:
+          name: _TransFresnel
+        second: .0700000003
+      data:
+        first:
+          name: _TPOW
+        second: 1
+      data:
+        first:
+          name: _TMUL
+        second: 1
+      data:
+        first:
+          name: _Dist
+        second: 1
+      data:
+        first:
+          name: _AOST
+        second: 1
+      data:
+        first:
+          name: _PP
+        second: 1
+      data:
+        first:
+          name: _RS
+        second: 1.89538455
+    m_Colors:
+      data:
+        first:
+          name: _EmissionColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _ColorTint
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _SpecularColor
+        second: {r: .5, g: .5, b: .5, a: 1}
+      data:
+        first:
+          name: _AmbientColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _RimColor
+        second: {r: .648140132, g: .732737839, b: .816176474, a: 1}
+      data:
+        first:
+          name: _TransColor
+        second: {r: 1, g: .847870171, b: .779411793, a: 1}
+      data:
+        first:
+          name: _SSSC
+        second: {r: 1, g: 1, b: 1, a: 1}
