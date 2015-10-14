@@ -85,6 +85,11 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!82 &3756074 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 8208884, guid: 556da1db920591747bf63ad34ded94dc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1768680465}
 --- !u!1 &19691256
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,8 +172,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 1af7ff7a209b19642abf272e9a021a36, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -835,6 +840,56 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 41dc84019e9376b46908ba7afdd1d15e, type: 3}
   m_PrefabInternal: {fileID: 1882082516}
+--- !u!1001 &1768680465
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 484962, guid: 556da1db920591747bf63ad34ded94dc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 468.697845
+      objectReference: {fileID: 0}
+    - target: {fileID: 484962, guid: 556da1db920591747bf63ad34ded94dc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 274.941742
+      objectReference: {fileID: 0}
+    - target: {fileID: 484962, guid: 556da1db920591747bf63ad34ded94dc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 484962, guid: 556da1db920591747bf63ad34ded94dc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 484962, guid: 556da1db920591747bf63ad34ded94dc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 484962, guid: 556da1db920591747bf63ad34ded94dc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 484962, guid: 556da1db920591747bf63ad34ded94dc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 484962, guid: 556da1db920591747bf63ad34ded94dc, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460876, guid: 556da1db920591747bf63ad34ded94dc, type: 2}
+      propertyPath: m_AudioSource
+      value: 
+      objectReference: {fileID: 3756074}
+    - target: {fileID: 8208884, guid: 556da1db920591747bf63ad34ded94dc, type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ef33c4c715bc234a97799e411a959f6, type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 556da1db920591747bf63ad34ded94dc, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1813338838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,8 +1080,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 1af7ff7a209b19642abf272e9a021a36, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1108,7 +1163,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 7dfc2e1472ac84e1bb749a8a9f934483, type: 3}
     m_FontSize: 80
     m_FontStyle: 1
     m_BestFit: 0

@@ -5,11 +5,13 @@ public class musicControls : MonoBehaviour {
 
     public AudioClip[] m_SongList;
     public int currentPlayingTrack = 0;
-    public AudioSource m_AudioSource;
+    private AudioSource m_AudioSource;
 
 	// Use this for initialization
 	void Start () {
 
+        m_AudioSource = GetComponent<AudioSource>();
+        
         DontDestroyOnLoad(this.gameObject);
 	
 	}
