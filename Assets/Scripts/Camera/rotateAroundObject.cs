@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/*Created by Chris Figueroa
+ * 
+ * This is the script used to rotate the camera around an object. 
+ * Currently used in the title screen
+ * 
+*/
+
+using UnityEngine;
 using System.Collections;
 
 public class rotateAroundObject : MonoBehaviour {

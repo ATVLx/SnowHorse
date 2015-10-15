@@ -76,6 +76,22 @@ public class BoardController : MonoBehaviour {
                 //give back rail point privledges since we have landed
                 hasGivenRailPoints = false;
 
+                if (transform.localEulerAngles.y > 260 && transform.localEulerAngles.y < 320)
+                {
+                    _rigid.AddTorque(transform.up * 8000 * Time.deltaTime);
+                    Debug.Log("Correct right");
+                }
+                else if (transform.localEulerAngles.y > 30 && transform.localEulerAngles.y < 140)
+                {
+                    _rigid.AddTorque(-transform.up * 8000 * Time.deltaTime);
+                    Debug.Log("CORRECT left!");
+                }
+                else
+                {
+                    _rigid.angularVelocity = Vector3.zero;
+                }
+                
+
             }
         }
         else

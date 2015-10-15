@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/*Created by Chris Figueroa
+ * 
+ * This is used so that the Horse Player always stays in one line going down the hill.
+ * This helps us from drifting left or right. 
+*/
+
+
+using UnityEngine;
 using System.Collections;
 
 public class directionCorrector : MonoBehaviour {
