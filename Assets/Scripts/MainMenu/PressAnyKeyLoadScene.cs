@@ -28,12 +28,11 @@ public class PressAnyKeyLoadScene : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-#if UNITY_STANDALONE
+        //Check if there is any input so we can load the Main Menu
         if (Input.anyKey)
         {
             loadSceneNow();
         }
-#endif
 
     }
 
