@@ -79,12 +79,12 @@ public class BoardController : MonoBehaviour {
                 if (transform.localEulerAngles.y > 260 && transform.localEulerAngles.y < 320)
                 {
                     _rigid.AddTorque(transform.up * 8000 * Time.deltaTime);
-                    Debug.Log("Correct right");
+                    //Debug.Log("Correct right");
                 }
                 else if (transform.localEulerAngles.y > 30 && transform.localEulerAngles.y < 140)
                 {
                     _rigid.AddTorque(-transform.up * 8000 * Time.deltaTime);
-                    Debug.Log("CORRECT left!");
+                    //Debug.Log("CORRECT left!");
                 }
                 else
                 {
