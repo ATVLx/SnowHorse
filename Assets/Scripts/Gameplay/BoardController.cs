@@ -35,6 +35,13 @@ public class BoardController : MonoBehaviour {
         //get the rigidbody
         _rigid = GetComponent<Rigidbody>();
 
+        //get the trickpointcontroller
+        _trickController = GameObject.Find("Canvas").GetComponent<trickPointController>();
+        if (_trickController == null)
+        {
+            Debug.Log("<color=red>Couldn't find Canvas in Hierarchy</color>");
+        }
+
 	}
 	
 	// Update is called once per frame
