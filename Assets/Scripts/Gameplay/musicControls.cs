@@ -26,5 +26,33 @@ public class musicControls : MonoBehaviour {
             Debug.Log("Changing song");
         }
 
+#if UNITY_STANDALONE
+
+        //standalone music changing goes here
+
+#endif
+
+#if UNITY_XBOXONE
+
+        if (XboxOneInput.GetKeyDown(XboxOneKeyCode.Gamepad1ButtonDPadRight))
+        {
+            if (currentPlayingTrack != m_SongList.Length)
+            {
+                m_AudioSource.PlayOneShot(m_SongList[currentPlayingTrack]);
+            }
+        }
+        else if (XboxOneInput.GetKeyDown(XboxOneKeyCode.Gamepad1ButtonDPadLeft))
+        {
+            if (currentPlayingTrack != 0)
+            {
+                m_AudioSource.PlayOneShot(m_SongList[currentPlayingTrack - 1]);
+            }
+        }
+
+#endif
+
+
+        
+
 	}
 }
