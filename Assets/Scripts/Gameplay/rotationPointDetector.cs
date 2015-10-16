@@ -11,6 +11,12 @@ public class rotationPointDetector : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+        m_trickController = GameObject.Find("Canvas").GetComponent<trickPointController>();
+        if (m_trickController == null)
+        {
+            Debug.Log("<color=red>Couldn't find Canvas in Hierarchy</color>");
+        }
+
         mRecoveryTimer = mTimer;
 	}
 	

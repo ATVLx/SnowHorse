@@ -8,6 +8,12 @@ public class cameraController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+        m_Board = GameObject.Find("Board");
+        if (m_Board == null)
+        {
+            Debug.Log("<color=red>Couldn't find Board in Hierarchy</color>");
+        }
 	
 	}
 	
