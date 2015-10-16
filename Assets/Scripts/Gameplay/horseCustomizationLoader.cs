@@ -12,6 +12,8 @@ public class horseCustomizationLoader : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+        
+
         //load the currentHatName
         if (PlayerPrefs.HasKey("hat"))
         {

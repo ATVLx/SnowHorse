@@ -4,7 +4,8 @@ using System.Collections;
 public class velocityDetector : MonoBehaviour {
 
 	private Rigidbody _rigid;
-	public float m_velocityCap = 20.0f;
+	[HideInInspector]
+    public float m_velocityCap = 25.0f;
 
 	// Use this for initialization
 	void Start () {
