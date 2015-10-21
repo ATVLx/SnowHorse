@@ -230,12 +230,12 @@ public class BoardController : MonoBehaviour {
     private void rotateControl()
     {
         //rotate left or right
-        if (hAxis > 0.4f)
+        if (hAxis > 0.2f)
         {
             //rotate right
             _rigid.AddTorque(transform.up * torque);
         }
-        else if (hAxis < -0.4f)
+        else if (hAxis < -0.2f)
         {
             //rotate left
             _rigid.AddTorque(-transform.up * torque);
@@ -253,12 +253,12 @@ public class BoardController : MonoBehaviour {
     /// </summary>
     private void flipControl()
     {
-        if (vAxis > 0.4f)
+        if (vAxis > 0.2f)
         {
             //rotate forward
             _rigid.AddTorque(transform.forward * flippingTorque);
         }
-        else if (vAxis < -0.4f)
+        else if (vAxis < -0.2f)
         {
             //rotate back
             _rigid.AddTorque(-transform.forward * flippingTorque);

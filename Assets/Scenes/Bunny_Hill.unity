@@ -16552,6 +16552,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdbcc25d3e29095439987c839f52c7f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overrideLoading: 0
+  overrideHatNumber: 0
+  overrideSnowboardNumber: 0
   m_Hats:
   - {fileID: 633241659}
   m_Snowboards:
@@ -41301,6 +41304,10 @@ Prefab:
     - target: {fileID: 22492852, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 149228, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
