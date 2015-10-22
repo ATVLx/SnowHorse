@@ -6,6 +6,11 @@ public class BoardController : MonoBehaviour {
     [Header("Input Settings")]
     private float hAxis, vAxis, rightHAxis, rightVAxis;
     private Rigidbody _rigid;
+
+    [Header("Input Settings")]
+    public float deadZone = 0.2f;
+
+    [Header("Torque Settings")]
     public float torque = 150.0f;
 	public float flippingTorque = 100.0f;
     private Transform startPosition;
@@ -230,12 +235,12 @@ public class BoardController : MonoBehaviour {
     private void rotateControl()
     {
         //rotate left or right
-        if (hAxis > 0.2f)
+        if (hAxis > deadZone)
         {
             //rotate right
             _rigid.AddTorque(transform.up * torque);
         }
-        else if (hAxis < -0.2f)
+        else if (hAxis < -deadZone)
         {
             //rotate left
             _rigid.AddTorque(-transform.up * torque);
@@ -253,12 +258,12 @@ public class BoardController : MonoBehaviour {
     /// </summary>
     private void flipControl()
     {
-        if (vAxis > 0.2f)
+        if (vAxis > deadZone)
         {
             //rotate forward
             _rigid.AddTorque(transform.forward * flippingTorque);
         }
-        else if (vAxis < -0.2f)
+        else if (vAxis < -deadZone)
         {
             //rotate back
             _rigid.AddTorque(-transform.forward * flippingTorque);
