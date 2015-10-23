@@ -19,6 +19,20 @@ public class musicControls : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+
+            if (m_AudioSource.volume > 0)
+            {
+                m_AudioSource.volume = 0.0f;
+            }
+            else
+            {
+                m_AudioSource.volume = 1.0f;
+            }
+
+        }
+
         if (m_AudioSource.isPlaying == false)
         {
             m_AudioSource.PlayOneShot(m_SongList[currentPlayingTrack]);

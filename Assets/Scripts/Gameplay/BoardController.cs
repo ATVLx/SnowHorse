@@ -3,11 +3,12 @@ using System.Collections;
 
 public class BoardController : MonoBehaviour {
 
+
     [Header("Input Settings")]
     private float hAxis, vAxis, rightHAxis, rightVAxis;
     private Rigidbody _rigid;
 
-    [Header("Input Settings")]
+    [Header("Deadzone Settings")]
     public float deadZone = 0.2f;
 
     [Header("Torque Settings")]
@@ -17,10 +18,10 @@ public class BoardController : MonoBehaviour {
 
     [Header("Trick Settings")]
     public trickPointController _trickController;
-    public bool hasGivenRailPoints = false;
+    private bool hasGivenRailPoints = false;
 
     [Header("Raycast Settings")]
-    public float rayDistance = 5.0f;
+    private float rayDistance = 0.1f;
 
     [Header("Air Settings")]
     public bool isGrounded = false;
