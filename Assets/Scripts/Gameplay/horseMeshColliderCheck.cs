@@ -10,10 +10,10 @@ public class horseMeshColliderCheck : MonoBehaviour {
     public GameObject m_HorseRagdoll;
     public cameraController m_Camera;
 
-
-
 	// Use this for initialization
 	void Start () {
+
+        m_Camera = GameObject.Find("Main Camera").GetComponent<cameraController>();
 
         m_Collider = GetComponent<BoxCollider>();
         m_Collider.isTrigger = true;
@@ -23,7 +23,7 @@ public class horseMeshColliderCheck : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.name != "Board")
+        if (other.tag == "Ridable" || other.tag == "Rail")
         {
             //instantiate a new ragdoll
             createRagdoll();

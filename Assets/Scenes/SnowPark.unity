@@ -126,7 +126,7 @@ GameObject:
   - 23: {fileID: 21520959}
   m_Layer: 0
   m_Name: Ramp (2)
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,7 +199,7 @@ GameObject:
   - 23: {fileID: 27865132}
   m_Layer: 0
   m_Name: Ramp (35)
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -272,7 +272,7 @@ GameObject:
   - 23: {fileID: 49802823}
   m_Layer: 0
   m_Name: Ramp (28)
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -371,7 +371,7 @@ GameObject:
   - 65: {fileID: 79301575}
   - 23: {fileID: 79301574}
   m_Layer: 0
-  m_Name: Ramp (20)
+  m_Name: Rail
   m_TagString: Rail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -799,7 +799,7 @@ GameObject:
   - 23: {fileID: 324668110}
   m_Layer: 0
   m_Name: Ramp (33)
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1002,7 +1002,7 @@ GameObject:
   - 65: {fileID: 411539632}
   - 23: {fileID: 411539631}
   m_Layer: 0
-  m_Name: Ramp (19)
+  m_Name: Rail
   m_TagString: Rail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1196,7 +1196,7 @@ GameObject:
   - 23: {fileID: 460582367}
   m_Layer: 0
   m_Name: Ramp (31)
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1423,7 +1423,7 @@ GameObject:
   - 23: {fileID: 565286882}
   m_Layer: 0
   m_Name: Ramp (13)
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1532,11 +1532,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434a7ae2a0fe21841a7b37b8fffb643e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadZone: .200000003
   torque: 80
   flippingTorque: 80
   _trickController: {fileID: 436364937}
-  hasGivenRailPoints: 0
-  rayDistance: .100000001
   isGrounded: 0
   jumpHeight: 250
   _anim: {fileID: 418867211}
@@ -1569,6 +1568,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdbcc25d3e29095439987c839f52c7f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overrideLoading: 0
+  overrideHatNumber: 0
+  overrideSnowboardNumber: 0
   m_Hats:
   - {fileID: 633241659}
   m_Snowboards:
@@ -1788,7 +1790,7 @@ GameObject:
   - 65: {fileID: 655355047}
   - 23: {fileID: 655355046}
   m_Layer: 0
-  m_Name: Ramp (25)
+  m_Name: Rail
   m_TagString: Rail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1889,7 +1891,7 @@ GameObject:
   - 65: {fileID: 685250005}
   - 23: {fileID: 685250004}
   m_Layer: 0
-  m_Name: Ramp (6)
+  m_Name: Rail
   m_TagString: Rail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2019,7 +2021,7 @@ GameObject:
   - 23: {fileID: 823580104}
   m_Layer: 0
   m_Name: Ramp (26)
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2089,7 +2091,7 @@ GameObject:
   - 4: {fileID: 863382331}
   m_Layer: 0
   m_Name: _Jumps
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2201,7 +2203,7 @@ GameObject:
   - 23: {fileID: 883939658}
   m_Layer: 0
   m_Name: Ramp (3)
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2485,7 +2487,7 @@ GameObject:
   - 65: {fileID: 985499125}
   - 23: {fileID: 985499124}
   m_Layer: 0
-  m_Name: Ramp (24)
+  m_Name: Rail
   m_TagString: Rail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2821,7 +2823,7 @@ GameObject:
   - 65: {fileID: 1074385957}
   - 23: {fileID: 1074385956}
   m_Layer: 0
-  m_Name: Ramp (5)
+  m_Name: Rail
   m_TagString: Rail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2922,7 +2924,7 @@ GameObject:
   - 23: {fileID: 1104582873}
   m_Layer: 0
   m_Name: Ramp (1)
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3057,7 +3059,7 @@ GameObject:
   - 65: {fileID: 1210452756}
   - 23: {fileID: 1210452755}
   m_Layer: 0
-  m_Name: Ramp (17)
+  m_Name: Rail
   m_TagString: Rail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3131,7 +3133,7 @@ GameObject:
   - 23: {fileID: 1211724375}
   m_Layer: 0
   m_Name: Ramp (27)
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3204,7 +3206,7 @@ GameObject:
   - 23: {fileID: 1218971185}
   m_Layer: 0
   m_Name: Ramp (37)
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3332,7 +3334,7 @@ GameObject:
   - 65: {fileID: 1259094359}
   - 23: {fileID: 1259094358}
   m_Layer: 0
-  m_Name: Ramp (16)
+  m_Name: Rail
   m_TagString: Rail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3740,7 +3742,7 @@ GameObject:
   - 23: {fileID: 1427043163}
   m_Layer: 0
   m_Name: Ramp (18)
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4191,7 +4193,7 @@ GameObject:
   - 23: {fileID: 1751886970}
   m_Layer: 0
   m_Name: Ramp (22)
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4295,7 +4297,7 @@ GameObject:
   - 23: {fileID: 1848280895}
   m_Layer: 0
   m_Name: Ramp (34)
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4368,7 +4370,7 @@ GameObject:
   - 23: {fileID: 1946216629}
   m_Layer: 0
   m_Name: Ramp (21)
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4721,7 +4723,7 @@ GameObject:
   - 23: {fileID: 2081410902}
   m_Layer: 0
   m_Name: Ramp (36)
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4794,7 +4796,7 @@ GameObject:
   - 23: {fileID: 2088650062}
   m_Layer: 0
   m_Name: Ramp (38)
-  m_TagString: Untagged
+  m_TagString: Ridable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4908,7 +4910,7 @@ GameObject:
   - 65: {fileID: 2113935462}
   - 23: {fileID: 2113935461}
   m_Layer: 0
-  m_Name: Ramp (23)
+  m_Name: Rail
   m_TagString: Rail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
