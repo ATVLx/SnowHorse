@@ -30,8 +30,32 @@ public class horseMeshColliderCheck : MonoBehaviour {
             //disable the parent
             transform.parent.gameObject.SetActive(false);
 
+            //stop the music
+            GameObject _music = GameObject.Find("_Music");
+            if (_music != null)
+            {
+                _music.GetComponent<musicControls>().musicStop();
+                Debug.Log("Slowing Down Music");
+            }
+
+            //shake camera? 
+            GameObject _cam = GameObject.Find("Main Camera");
+            iTween.ShakePosition(_cam, new Vector3(0.1f, 0.1f, 0.1f), 0.3f);
+
+            //slow down time
+            Debug.Log("Slowing Down Time");
+            Time.timeScale = 0.45f;
+
             Debug.Log("Hit");
+
+            Invoke("restartLevel", 4.0f);
+
         }
+    }
+
+    private void restartLevel()
+    {
+        Application.LoadLevel(Application.loadedLevelName);
     }
 
     private void createRagdoll()

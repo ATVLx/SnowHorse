@@ -64,9 +64,26 @@ public class musicControls : MonoBehaviour {
         }
 
 #endif
-
-
-        
-
 	}
+
+    public void musicStop()
+    {
+        Hashtable _ht = iTween.Hash("from", m_AudioSource.volume, "to", 0.0f, "time", 0.5f, "onupdate", "musicChangeVolume");
+        iTween.ValueTo(this.gameObject, _ht);
+    }
+
+    public void musicPlay()
+    {
+        if (m_AudioSource.volume < 1.0f)
+        {
+            Hashtable _ht = iTween.Hash("from", 0.0f, "to", 1.0f, "time", 0.5f, "onupdate", "musicChangeVolume");
+            iTween.ValueTo(this.gameObject, _ht);
+        }
+    }
+
+    public void musicChangeVolume(float newValue)
+    {
+        m_AudioSource.volume = newValue;
+    }
+
 }

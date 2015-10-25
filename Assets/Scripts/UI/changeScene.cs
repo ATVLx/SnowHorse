@@ -12,6 +12,25 @@ public class changeScene : MonoBehaviour {
     {
         //change the time scale back to normal
         Time.timeScale = 1.0f;
+        playMusicAgain();
         Application.LoadLevel(scene);
+    }
+
+    public void loadSameScene()
+    {
+        //change the time scale back to normal
+        Time.timeScale = 1.0f;
+        playMusicAgain();
+        Application.LoadLevel(Application.loadedLevelName);
+    }
+
+    public void playMusicAgain()
+    {
+        GameObject _music = GameObject.Find("_Music");
+        if (_music != null)
+        {
+            _music.GetComponent<musicControls>().musicPlay();
+            Debug.Log("Playing Music Again");
+        }
     }
 }
