@@ -31,6 +31,8 @@ public class PrototypeLevel : EditorWindow {
 
     }
 
+    public GameObject _board;
+    public GameObject _canvas;
 
     void OnGUI()
     {
@@ -46,18 +48,31 @@ public class PrototypeLevel : EditorWindow {
         if (GUILayout.Button("Setup Scene"))
         {
             //create a new Board Object in the scene
-            GameObject _board;
-            _board = Instantiate(Board, new Vector3(20.0f, 16.59f, 0), Quaternion.identity) as GameObject;
-            _board.name = "Board";
-
+            if (GameObject.Find("Board") == null)
+            {
+                _board = Instantiate(Board, new Vector3(20.0f, 16.59f, 0), Quaternion.identity) as GameObject;
+                _board.name = "Board";
+            }
+            else
+            {
+                _board = GameObject.Find("Board");
+                Debug.Log("<color=green>Board Already Exists</color>");
+            }
 
             //Create a new canvas
-            GameObject _canvas;
-            _canvas = Instantiate(Canvas, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-            _canvas.name = "Canvas";
-            //assign the trick controller to the fields it needs
-            _board.GetComponent<BoardController>()._trickController = _canvas.GetComponent<trickPointController>();
-            _board.GetComponent<rotationPointDetector>().m_trickController = _canvas.GetComponent<trickPointController>();
+            if (GameObject.Find("Canvas") == null)
+            {
+                _canvas = Instantiate(Canvas, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+                _canvas.name = "Canvas";
+                //assign the trick controller to the fields it needs
+                _board.GetComponent<BoardController>()._trickController = _canvas.GetComponent<trickPointController>();
+                _board.GetComponent<rotationPointDetector>().m_trickController = _canvas.GetComponent<trickPointController>();
+            }
+            else
+            {
+                _canvas = GameObject.Find("Canvas");
+                Debug.Log("<color=green>Canvas Already Exists</color>");
+            }
 
             //find the main camera and add the script needed
             // add the Board to the object to follow
@@ -127,6 +142,21 @@ public class PrototypeLevel : EditorWindow {
 
             //tag as Rail
             _rail.tag = "Ridable";
+        }
+
+        GUILayout.Space(10);
+        EditorGUILayout.LabelField("Tag Models");
+
+        if (GUILayout.Button("Tag as Ramp"))
+        {
+            GameObject _tempRamp = Selection.activeGameObject;
+            _tempRamp.tag = "Ridable";
+        }
+
+        if (GUILayout.Button("Tag as Rail"))
+        {
+            GameObject _tempRamp = Selection.activeGameObject;
+            _tempRamp.tag = "Rail";
         }
 
 
