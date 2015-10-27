@@ -21,16 +21,7 @@ public class PauseController : MonoBehaviour {
 
         if (XboxOneInput.GetKeyDown(XboxOneKeyCode.Gamepad1ButtonMenu))
         {
-            if (PauseMenu.activeSelf == false)
-            {
-                PauseMenu.SetActive(true);
-                Time.timeScale = 0.0f;
-            }
-            else
-            {
-                PauseMenu.SetActive(false);
-                Time.timeScale = 1.0f;
-            }
+            pauseGame();
         }
 
 #endif
@@ -39,20 +30,26 @@ public class PauseController : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
-			if (PauseMenu.activeSelf == false)
-			{
-				PauseMenu.SetActive(true);
-				Time.timeScale = 0.0f;
-			}
-			else
-			{
-				PauseMenu.SetActive(false);
-				Time.timeScale = 1.0f;
-			}
+            pauseGame();
 		}
 
 #endif
         
 	
 	}
+
+    public void pauseGame()
+    {
+        if (PauseMenu.activeSelf == false)
+        {
+            PauseMenu.SetActive(true);
+            Time.timeScale = 0.0f;
+        }
+        else
+        {
+            PauseMenu.SetActive(false);
+            Time.timeScale = 1.0f;
+        }
+    }
+
 }

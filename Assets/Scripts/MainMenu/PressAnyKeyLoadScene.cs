@@ -17,6 +17,10 @@ public class PressAnyKeyLoadScene : MonoBehaviour {
         m_anyKeyText.text = "Press Any Key/Button";
 #endif
 
+#if UNITY_IOS || UNITY_ANDROID
+        m_anyKeyText.text = "Tap to Start";
+#endif
+
 #if UNITY_XBOXONE
         m_anyKeyText.text = "Press Any Button";
 #endif
