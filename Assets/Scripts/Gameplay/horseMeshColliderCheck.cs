@@ -55,6 +55,10 @@ public class horseMeshColliderCheck : MonoBehaviour {
 
     private void restartLevel()
     {
+        //set the time scale back to normal
+        Time.timeScale = 1.0f;
+
+        //load the level again 
         Application.LoadLevel(Application.loadedLevelName);
     }
 

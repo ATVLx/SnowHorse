@@ -9980,7 +9980,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 376231435}
   m_Layer: 0
-  m_Name: _level
+  m_Name: _Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14550,7 +14550,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 501527713}
-  m_LocalRotation: {x: .89904815, y: -.000992584042, z: .361047447, w: .247701809}
+  m_LocalRotation: {x: .898037016, y: .0041943416, z: .364837229, w: .245775878}
   m_LocalPosition: {x: -648, y: 106, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -16515,11 +16515,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434a7ae2a0fe21841a7b37b8fffb643e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadZone: .200000003
   torque: 80
   flippingTorque: 80
   _trickController: {fileID: 1580423341}
-  hasGivenRailPoints: 0
-  rayDistance: .100000001
   isGrounded: 0
   jumpHeight: 250
   _anim: {fileID: 418867211}
@@ -16552,6 +16551,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdbcc25d3e29095439987c839f52c7f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overrideLoading: 0
+  overrideHatNumber: 0
+  overrideSnowboardNumber: 0
   m_Hats:
   - {fileID: 633241659}
   m_Snowboards:
@@ -27719,6 +27721,7 @@ GameObject:
   - 114: {fileID: 998444353}
   - 114: {fileID: 998444355}
   - 45: {fileID: 998444354}
+  - 114: {fileID: 998444356}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -27787,7 +27790,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 998444347}
-  m_LocalRotation: {x: .183012247, y: -.683012009, z: .183012649, w: .683013558}
+  m_LocalRotation: {x: .183012709, y: -.683012724, z: .183012709, w: .683012724}
   m_LocalPosition: {x: 24.2000008, y: 20.3099995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -27828,6 +27831,19 @@ MonoBehaviour:
   strengthX: .270999998
   strengthY: .270999998
   fishEyeShader: {fileID: 4800000, guid: 874ceab4425f64bccb1d14032f4452b1, type: 3}
+--- !u!114 &998444356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 998444347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 208679fb7d8b9064d93362dd2b02f17d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Board: {fileID: 0}
+  m_Offset: {x: 0, y: 0, z: 0}
 --- !u!1001 &998494038
 Prefab:
   m_ObjectHideFlags: 0
