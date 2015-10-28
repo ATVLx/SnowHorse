@@ -12,6 +12,7 @@ public class PrototypeLevel : EditorWindow {
     public GameObject Canvas;
     public GameObject Level;
     public GameObject Rail, Ramp;
+    public GameObject Exit;
 
     [MenuItem("Snow Horse/Level Prototyper")]
     static void ShowEditor()
@@ -98,6 +99,10 @@ public class PrototypeLevel : EditorWindow {
             //change the directional light angle
             GameObject.Find("Directional Light").transform.eulerAngles = new Vector3(26, 133, 168);
 
+            //create the exit
+            GameObject _Exit;
+            _Exit = Instantiate(Exit, new Vector3(-971, -358, -3.7f), Quaternion.identity) as GameObject;
+            _Exit.name = "Exit_Trigger";
 
         }
 
@@ -142,6 +147,23 @@ public class PrototypeLevel : EditorWindow {
 
             //tag as Rail
             _rail.tag = "Ridable";
+        }
+
+        if (GUILayout.Button("Level Exit - End of Run"))
+        {
+
+            if (GameObject.Find("Exit_Trigger") == null)
+            {
+                //create the exit
+                GameObject _Exit;
+                _Exit = Instantiate(Exit, new Vector3(-971, -358, -3.7f), Quaternion.identity) as GameObject;
+                _Exit.name = "Exit_Trigger";
+            }
+            else
+            {
+                Debug.Log("<color=green>Exit_Trigger already exists in scene</color>");
+            }
+
         }
 
         GUILayout.Space(10);
