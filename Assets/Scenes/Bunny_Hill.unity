@@ -15067,6 +15067,40 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 435324, guid: d75c2b38a50054311a84d0087d4fb9c7, type: 2}
   m_PrefabInternal: {fileID: 548444442}
+--- !u!1 &554814348 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 194166, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+  m_PrefabInternal: {fileID: 1489552889}
+--- !u!114 &554814353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 554814348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1065132964}
+          m_MethodName: trick2BaseUpbutton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1001 &558163869
 Prefab:
   m_ObjectHideFlags: 0
@@ -23463,6 +23497,40 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 435324, guid: d75c2b38a50054311a84d0087d4fb9c7, type: 2}
   m_PrefabInternal: {fileID: 879617309}
+--- !u!1 &879741760 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 172510, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+  m_PrefabInternal: {fileID: 1489552889}
+--- !u!114 &879741765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 879741760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1065132964}
+          m_MethodName: trick3BaseRightbutton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1001 &881057812
 Prefab:
   m_ObjectHideFlags: 0
@@ -28457,6 +28525,12 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 435324, guid: d75c2b38a50054311a84d0087d4fb9c7, type: 2}
   m_PrefabInternal: {fileID: 1064988915}
+--- !u!114 &1065132964 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11409680, guid: a6f3d3a40037da84ebb1d1c7a664f3fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1489552889}
+  m_Script: {fileID: 11500000, guid: f5fc7b1e0aa71014792d7780869a52fb, type: 3}
 --- !u!1001 &1067263834
 Prefab:
   m_ObjectHideFlags: 0
@@ -39241,6 +39315,40 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 435324, guid: d75c2b38a50054311a84d0087d4fb9c7, type: 2}
   m_PrefabInternal: {fileID: 1483095241}
+--- !u!1 &1485331858 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 119782, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+  m_PrefabInternal: {fileID: 1489552889}
+--- !u!114 &1485331863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1485331858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1065132964}
+          m_MethodName: trick4BaseLeftbutton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1001 &1487859528
 Prefab:
   m_ObjectHideFlags: 0
@@ -39434,6 +39542,22 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11461262, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11492670, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11487994, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440064, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 22492852, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -39505,6 +39629,198 @@ Prefab:
     - target: {fileID: 22492852, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492584, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492584, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492584, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492584, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -65
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492584, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492584, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 22483528, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22483528, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22483528, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 185
+      objectReference: {fileID: 0}
+    - target: {fileID: 22483528, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -65
+      objectReference: {fileID: 0}
+    - target: {fileID: 22483528, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 22483528, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 22448808, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22448808, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22448808, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 22448808, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -185
+      objectReference: {fileID: 0}
+    - target: {fileID: 22448808, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 22448808, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 22412398, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22412398, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22412398, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 185
+      objectReference: {fileID: 0}
+    - target: {fileID: 22412398, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -185
+      objectReference: {fileID: 0}
+    - target: {fileID: 22412398, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 22412398, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467200, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22446020, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22446020, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22446020, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -125
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461262, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1065132964}
+    - target: {fileID: 11461262, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: trick1BaseDownbutton
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461262, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461262, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461262, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11492670, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1065132964}
+    - target: {fileID: 11492670, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: trick2BaseUpbutton
+      objectReference: {fileID: 0}
+    - target: {fileID: 11492670, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11492670, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11492670, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11487994, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1065132964}
+    - target: {fileID: 11487994, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: trick3BaseRightbutton
+      objectReference: {fileID: 0}
+    - target: {fileID: 11487994, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11487994, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11487994, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440064, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1065132964}
+    - target: {fileID: 11440064, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: trick4BaseLeftbutton
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440064, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440064, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11440064, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
@@ -50621,6 +50937,40 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 435324, guid: d75c2b38a50054311a84d0087d4fb9c7, type: 2}
   m_PrefabInternal: {fileID: 1930400624}
+--- !u!1 &1935163471 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 107706, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
+  m_PrefabInternal: {fileID: 1489552889}
+--- !u!114 &1935163476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935163471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1065132964}
+          m_MethodName: trick1BaseDownbutton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!4 &1935522282 stripped
 Transform:
   m_PrefabParentObject: {fileID: 435324, guid: d75c2b38a50054311a84d0087d4fb9c7, type: 2}

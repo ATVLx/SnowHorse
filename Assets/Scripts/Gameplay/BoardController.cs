@@ -4,8 +4,8 @@ using System.Collections;
 public class BoardController : MonoBehaviour {
 
 
-    [Header("Input Settings")]
-    private float hAxis, vAxis, rightHAxis, rightVAxis;
+    [HideInInspector]
+    public float hAxis, vAxis, rightHAxis, rightVAxis;
     private Rigidbody _rigid;
 
     [Header("Deadzone Settings")]
@@ -53,12 +53,14 @@ public class BoardController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+#if UNITY_STANDALONE || UNITY_XBOXONE
         hAxis = Input.GetAxis("Horizontal");
         vAxis = Input.GetAxis("Vertical");
         rightHAxis = Input.GetAxis("Horizontal2");
         rightVAxis = Input.GetAxis("Vertical2");
+#endif
 
-		//check to see if we are touching the ground or a rail
+        //check to see if we are touching the ground or a rail
         RaycastHit hit;
         Debug.DrawRay(transform.position, -Vector3.up * rayDistance, Color.green);
         if (Physics.Raycast(transform.position, -Vector3.up, out hit, rayDistance))
@@ -167,6 +169,35 @@ public class BoardController : MonoBehaviour {
 	}
 
 
+    public void baseTrickRight()
+    {
+        //base right trick
+        _anim.SetTrigger("baseRight");
+        _trickController.popPointsTimer("Horse Kick!", 1000, Color.green);
+    }
+
+    public void baseTrickLeft()
+    {
+        //base left trick
+        _anim.SetTrigger("baseLeft");
+        _trickController.popPointsTimer("Attack!", 2000, Color.yellow);
+    }
+
+    public void baseTrickUp()
+    {
+        //base up trick
+        _anim.SetTrigger("baseUp");
+        _trickController.popPointsTimer("Nose Up!", 2300, Color.yellow);
+    }
+
+    public void baseTrickDown()
+    {
+        //base down trick
+        _anim.SetTrigger("baseDown");
+        _trickController.popPointsTimer("Tail Wag!", 1000, Color.green);
+    }
+
+
     private void trickControls()
     {
 
@@ -174,27 +205,19 @@ public class BoardController : MonoBehaviour {
 
         if (XboxOneInput.GetKeyDown(XboxOneKeyCode.Gamepad1ButtonB) || Input.GetKeyDown(KeyCode.L))
         {
-            //base right trick
-            _anim.SetTrigger("baseRight");
-            _trickController.popPointsTimer("Horse Kick!", 1000, Color.green);
+            baseTrickRight();
         }
         else if (XboxOneInput.GetKeyDown(XboxOneKeyCode.Gamepad1ButtonX) || Input.GetKeyDown(KeyCode.J))
         {
-            //base left trick
-            _anim.SetTrigger("baseLeft");
-            _trickController.popPointsTimer("Attack!", 2000, Color.yellow);
+            baseTrickLeft();
         }
         else if (XboxOneInput.GetKeyDown(XboxOneKeyCode.Gamepad1ButtonY) || Input.GetKeyDown(KeyCode.I))
         {
-            //base up trick
-            _anim.SetTrigger("baseUp");
-            _trickController.popPointsTimer("Nose Up!", 2300, Color.yellow);
+            baseTrickUp();
         }
         else if (XboxOneInput.GetKeyDown(XboxOneKeyCode.Gamepad1ButtonA) || Input.GetKeyDown(KeyCode.K))
         {
-            //base down trick
-            _anim.SetTrigger("baseDown");
-            _trickController.popPointsTimer("Tail Wag!", 1000, Color.green);
+            baseTrickDown();
         }
 
 #endif
@@ -203,27 +226,19 @@ public class BoardController : MonoBehaviour {
 
 		if (Input.GetKeyDown(KeyCode.L))
 		{
-			//base right trick
-			_anim.SetTrigger("baseRight");
-			_trickController.popPointsTimer("Horse Kick!", 1000, Color.green);
+			baseTrickRight();
 		}
 		else if (Input.GetKeyDown(KeyCode.J))
 		{
-			//base left trick
-			_anim.SetTrigger("baseLeft");
-			_trickController.popPointsTimer("Attack!", 2000, Color.yellow);
+			baseTrickLeft();
 		}
 		else if (Input.GetKeyDown(KeyCode.I))
 		{
-			//base up trick
-			_anim.SetTrigger("baseUp");
-			_trickController.popPointsTimer("Nose Up!", 2300, Color.yellow);
+			baseTrickUp();
 		}
 		else if (Input.GetKeyDown(KeyCode.K))
 		{
-			//base down trick
-			_anim.SetTrigger("baseDown");
-			_trickController.popPointsTimer("Tail Wag!", 1000, Color.green);
+			baseTrickDown();
 		}
 
 #endif
