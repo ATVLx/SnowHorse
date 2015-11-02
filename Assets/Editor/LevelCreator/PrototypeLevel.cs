@@ -12,7 +12,7 @@ public class PrototypeLevel : EditorWindow {
     public GameObject Canvas;
     public GameObject Level;
     public GameObject Rail, Ramp;
-    public GameObject Exit;
+    //public GameObject Exit;
 
     [MenuItem("Snow Horse/Level Prototyper")]
     static void ShowEditor()
@@ -77,7 +77,10 @@ public class PrototypeLevel : EditorWindow {
 
             //find the main camera and add the script needed
             // add the Board to the object to follow
-            GameObject.Find("Main Camera").AddComponent<cameraController>();
+            if (GameObject.Find("Main Camera").GetComponent<cameraController>() == null)
+            {
+                GameObject.Find("Main Camera").AddComponent<cameraController>();
+            }
             GameObject.Find("Main Camera").GetComponent<cameraController>().m_Board = _board;
             GameObject.Find("Main Camera").transform.position = new Vector3( 24.20f, 20.31f, 0);
             GameObject.Find("Main Camera").transform.eulerAngles = new Vector3(30, -90, 0);
@@ -100,9 +103,11 @@ public class PrototypeLevel : EditorWindow {
             GameObject.Find("Directional Light").transform.eulerAngles = new Vector3(26, 133, 168);
 
             //create the exit
+            /*
             GameObject _Exit;
             _Exit = Instantiate(Exit, new Vector3(-971, -358, -3.7f), Quaternion.identity) as GameObject;
             _Exit.name = "Exit_Trigger";
+             * */
 
         }
 
@@ -149,6 +154,7 @@ public class PrototypeLevel : EditorWindow {
             _rail.tag = "Ridable";
         }
 
+        /*
         if (GUILayout.Button("Level Exit - End of Run"))
         {
 
@@ -165,6 +171,7 @@ public class PrototypeLevel : EditorWindow {
             }
 
         }
+         * */
 
         GUILayout.Space(10);
         EditorGUILayout.LabelField("Tag Models");
