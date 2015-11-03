@@ -1,10 +1,14 @@
-﻿using UnityEngine;
+﻿/* Created by Chris Figueroa - @Kinifi
+ * Create a script called AutoSave.cs
+ */
+
+using UnityEngine;
 using UnityEditor;
 using System.Collections;
 
 public class AutoSave : EditorWindow {
 
-    private float saveTime = 60;
+    private float saveTime = 30;
     private double nextSaveTime = 0;
     private bool stopAutoSave;
 
@@ -27,7 +31,9 @@ public class AutoSave : EditorWindow {
     void OnGUI()
     {
 
+        GUILayout.Label("Auto Saves Level Every 30 Seconds");
         stopAutoSave = GUILayout.Toggle(stopAutoSave, "Stop Auto Save");
+        GUILayout.Space(10);
 
         if (stopAutoSave == false)
         {
@@ -40,11 +46,12 @@ public class AutoSave : EditorWindow {
 
             if (EditorApplication.timeSinceStartup > nextSaveTime)
             {
-                var path = EditorApplication.currentScene.Split(char.Parse("/"));
-                path[path.Length - 1] = "AutoSave_" + path[path.Length - 1];
+                var path = EditorApplication.currentScene;
 
-                EditorApplication.SaveScene(string.Join("/", path), true);
-                Debug.Log("Saved Scene");
+                //EditorApplication.SaveScene(path, true);
+                EditorApplication.SaveScene();
+                EditorApplication.SaveAssets();
+                Debug.Log("Saved Scene: " + path);
 
                 nextSaveTime = EditorApplication.timeSinceStartup + saveTime;
             }
