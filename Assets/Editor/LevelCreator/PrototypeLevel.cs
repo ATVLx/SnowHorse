@@ -100,6 +100,14 @@ public class PrototypeLevel : EditorWindow {
             _level.transform.position = new Vector3(521, 293, 0);
 
             //change the directional light angle
+            if (GameObject.Find("Directional Light") == null)
+            {
+                GameObject lightGameObject = new GameObject("Directional Light");
+                Light lightComp = lightGameObject.AddComponent<Light>();
+                lightComp.color = Color.yellow;
+                lightGameObject.transform.position = new Vector3(26, 133, 168);
+            }
+
             GameObject.Find("Directional Light").transform.eulerAngles = new Vector3(26, 133, 168);
 
             //create the exit

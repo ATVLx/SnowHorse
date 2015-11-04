@@ -35,7 +35,7 @@ public class AutoSave : EditorWindow {
         stopAutoSave = GUILayout.Toggle(stopAutoSave, "Stop Auto Save");
         GUILayout.Space(10);
 
-        if (stopAutoSave == false)
+        if (stopAutoSave == false && EditorApplication.isCompiling == false && EditorApplication.isPlaying == false)
         {
             EditorGUILayout.LabelField("Save Each:", saveTime + " Secs");
 
