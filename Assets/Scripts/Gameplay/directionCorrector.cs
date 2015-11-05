@@ -10,17 +10,26 @@ using System.Collections;
 
 public class directionCorrector : MonoBehaviour {
 
+    Vector3 startPOS;
+
 	// Use this for initialization
 	void Start () {
+
+        getPosition();
 	
 	}
+
+    void getPosition()
+    {
+        startPOS = transform.position;
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
         if (transform.position.z != 0)
         {
-            Vector3 _newpos = new Vector3(transform.position.x, transform.position.y, 0);
+            Vector3 _newpos = new Vector3(transform.position.x, transform.position.y, startPOS.z);
             transform.position = _newpos;
         }
 
