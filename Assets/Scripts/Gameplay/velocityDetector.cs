@@ -17,13 +17,7 @@ public class velocityDetector : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		//check if we are going to fast
-		if(Mathf.Abs(_rigid.velocity.x) > m_velocityCap)
-		{
-			//slow down
-			_rigid.velocity = new Vector3(-m_velocityCap, _rigid.velocity.y, _rigid.velocity.z);
 
-		}
 
 	
 	}

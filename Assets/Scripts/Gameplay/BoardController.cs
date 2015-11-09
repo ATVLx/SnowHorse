@@ -8,6 +8,9 @@ public class BoardController : MonoBehaviour {
     public float hAxis, vAxis, rightHAxis, rightVAxis;
     private Rigidbody _rigid;
 
+    [Header("Can the Player Move")]
+    public bool canMove = true;
+
     [Header("Deadzone Settings")]
     public float deadZone = 0.2f;
 
@@ -33,8 +36,11 @@ public class BoardController : MonoBehaviour {
 	[Header("One Time Air Events")]
 	public bool oneTimeEvents = false;
 
-	// Use this for initialization
-	void Start () {
+    [Header("Velocity Cap")]
+    public float m_velocityCap = 25.0f;
+
+    // Use this for initialization
+    void Start () {
 
         //store the start position
         startPosition = transform;
@@ -53,89 +59,113 @@ public class BoardController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        //Can the player move and take control?
+        if (canMove == true)
+        {
+
 #if UNITY_STANDALONE || UNITY_XBOXONE
-        hAxis = Input.GetAxis("Horizontal");
-        vAxis = Input.GetAxis("Vertical");
-        rightHAxis = Input.GetAxis("Horizontal2");
-        rightVAxis = Input.GetAxis("Vertical2");
+            hAxis = Input.GetAxis("Horizontal");
+            vAxis = Input.GetAxis("Vertical");
+            rightHAxis = Input.GetAxis("Horizontal2");
+            rightVAxis = Input.GetAxis("Vertical2");
 #endif
 
-        //check to see if we are touching the ground or a rail
-        RaycastHit hit;
-        Debug.DrawRay(transform.position, -Vector3.up * rayDistance, Color.green);
-        if (Physics.Raycast(transform.position, -Vector3.up, out hit, rayDistance))
-        {
-			//HIT SOMETHING
+            //check the horses velocity
+            velocityCheck();
 
-			//Did we hit a rail?
-            if (hit.transform.tag == "Rail")
+
+            //check to see if we are touching the ground or a rail
+            RaycastHit hit;
+            Debug.DrawRay(transform.position, -Vector3.up * rayDistance, Color.green);
+            if (Physics.Raycast(transform.position, -Vector3.up, out hit, rayDistance))
             {
-                isGrounded = false;
-                if (hasGivenRailPoints == false)
-                {
-                    //give rail points
-                    hasGivenRailPoints = true;
-                    _trickController.popPointsTimer("Hay Slide", 3400, Color.black);
-                }
-                
-            }
-            else
-            {
+                //HIT SOMETHING
 
-				//No we didn't hit a rail! We touched the ground!!
-                _trickController.endTrickTimer();
-				_trickController.m_trickValue = 0;
-				_trickController.m_numOfTricks = 1;
-                isGrounded = true;
-
-                //give back rail point privledges since we have landed
-                hasGivenRailPoints = false;
-
-                if (transform.localEulerAngles.y > 260 && transform.localEulerAngles.y < 320)
+                //Did we hit a rail?
+                if (hit.transform.tag == "Rail")
                 {
-                    _rigid.AddTorque(transform.up * 8000 * Time.deltaTime);
-                    //Debug.Log("Correct right");
-                }
-                else if (transform.localEulerAngles.y > 30 && transform.localEulerAngles.y < 140)
-                {
-                    _rigid.AddTorque(-transform.up * 8000 * Time.deltaTime);
-                    //Debug.Log("CORRECT left!");
+                    isGrounded = false;
+                    if (hasGivenRailPoints == false)
+                    {
+                        //give rail points
+                        hasGivenRailPoints = true;
+                        _trickController.popPointsTimer("Hay Slide", 3400, Color.black);
+                    }
+
                 }
                 else
                 {
-                    _rigid.angularVelocity = Vector3.zero;
+
+                    //No we didn't hit a rail! We touched the ground!!
+                    _trickController.endTrickTimer();
+                    _trickController.m_trickValue = 0;
+                    _trickController.m_numOfTricks = 1;
+                    isGrounded = true;
+
+                    //give back rail point privledges since we have landed
+                    hasGivenRailPoints = false;
+
+                    if (transform.localEulerAngles.y > 260 && transform.localEulerAngles.y < 320)
+                    {
+                        _rigid.AddTorque(transform.up * 8000 * Time.deltaTime);
+                        //Debug.Log("Correct right");
+                    }
+                    else if (transform.localEulerAngles.y > 30 && transform.localEulerAngles.y < 140)
+                    {
+                        _rigid.AddTorque(-transform.up * 8000 * Time.deltaTime);
+                        //Debug.Log("CORRECT left!");
+                    }
+                    else
+                    {
+                        _rigid.angularVelocity = Vector3.zero;
+                    }
+
+
                 }
-                
+            }
+            else
+            {
+                isGrounded = false;
+            }
+
+            //is the player in the air? 
+            if (isGrounded == false)
+            {
+                //flip back or forward
+                flipControl();
+
+                //rotate control
+                rotateControl();
+
+                //allow the player to do tricks
+                trickControls();
+            }
+            else
+            {
+                //allow the player to jump
+                JumpControls();
+
+                _rigid.angularVelocity = Vector3.zero;
 
             }
+
         }
         else
         {
-            isGrounded = false;
+            //the player is not ready to play. Disable the rigidbody
+            _rigid.isKinematic = true;
         }
+        
 
-        //is the player in the air? 
-        if (isGrounded == false)
-        {
-            //flip back or forward
-            flipControl();
-
-            //rotate control
-            rotateControl();
-
-            //allow the player to do tricks
-            trickControls();
-        }
-        else
-        {
-            //allow the player to jump
-            JumpControls();
-
-            _rigid.angularVelocity = Vector3.zero;
-
-        }
 
 	}
+
+    public void enablePlayerForGameplay()
+    {
+        _rigid.isKinematic = false;
+        canMove = true;
+        Debug.Log("The Player is Active");
+    }
 
     private void JumpControls()
     {
@@ -288,6 +318,17 @@ public class BoardController : MonoBehaviour {
         {
             //stop rotating
             _rigid.angularVelocity = Vector3.zero;
+
+        }
+    }
+
+    private void velocityCheck()
+    {
+        //check if we are going to fast
+        if (Mathf.Abs(_rigid.velocity.x) > m_velocityCap)
+        {
+            //slow down
+            _rigid.velocity = new Vector3(-m_velocityCap, _rigid.velocity.y, _rigid.velocity.z);
 
         }
     }

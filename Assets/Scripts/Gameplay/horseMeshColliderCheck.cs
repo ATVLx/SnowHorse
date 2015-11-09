@@ -48,7 +48,7 @@ public class horseMeshColliderCheck : MonoBehaviour {
 
             Debug.Log("Hit");
 
-            Invoke("restartLevel", 4.0f);
+            Invoke("restartLevel", 3.0f);
 
         }
     }
@@ -59,7 +59,7 @@ public class horseMeshColliderCheck : MonoBehaviour {
         Time.timeScale = 1.0f;
 
         //load the level again 
-        Application.LoadLevel(Application.loadedLevelName);
+        LoadNewLevelAsync.LoadLevelAsyncNow(Application.loadedLevelName);
     }
 
     private void createRagdoll()

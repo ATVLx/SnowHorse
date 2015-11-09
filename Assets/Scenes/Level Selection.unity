@@ -96,7 +96,6 @@ GameObject:
   - 222: {fileID: 17570106}
   - 114: {fileID: 17570105}
   - 114: {fileID: 17570104}
-  - 114: {fileID: 17570107}
   m_Layer: 5
   m_Name: BackToMainMenu
   m_TagString: Untagged
@@ -161,9 +160,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 17570107}
-        m_MethodName: loadNewScene
-        m_Mode: 5
+      - m_Target: {fileID: 752807265}
+        m_MethodName: LoadMainMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -207,17 +206,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 17570102}
---- !u!114 &17570107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 17570102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1d7f4f0d3b505c4187521140861c3b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &29963238
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,7 +542,6 @@ GameObject:
   - 222: {fileID: 358981422}
   - 114: {fileID: 358981421}
   - 114: {fileID: 358981420}
-  - 114: {fileID: 358981423}
   m_Layer: 5
   m_Name: Snow Park
   m_TagString: Untagged
@@ -620,9 +607,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 358981423}
-        m_MethodName: loadNewScene
-        m_Mode: 5
+      - m_Target: {fileID: 752807265}
+        m_MethodName: LoadSnowPark
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -666,17 +653,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 358981418}
---- !u!114 &358981423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 358981418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1d7f4f0d3b505c4187521140861c3b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &422432960
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,6 +846,7 @@ GameObject:
   - 223: {fileID: 752807263}
   - 114: {fileID: 752807262}
   - 114: {fileID: 752807261}
+  - 114: {fileID: 752807265}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -949,6 +926,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &752807265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 752807260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89f8408e89e8e148ba3d9b6688e457a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &864706186
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,9 +948,8 @@ GameObject:
   - 222: {fileID: 864706190}
   - 114: {fileID: 864706189}
   - 114: {fileID: 864706188}
-  - 114: {fileID: 864706191}
   m_Layer: 5
-  m_Name: XHorseGames
+  m_Name: XDerby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1026,9 +1013,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 864706191}
-        m_MethodName: loadNewScene
-        m_Mode: 5
+      - m_Target: {fileID: 752807265}
+        m_MethodName: LoadXDerby
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1072,17 +1059,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 864706186}
---- !u!114 &864706191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 864706186}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1d7f4f0d3b505c4187521140861c3b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &965193542
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,7 +1545,6 @@ GameObject:
   - 222: {fileID: 1449641683}
   - 114: {fileID: 1449641682}
   - 114: {fileID: 1449641681}
-  - 114: {fileID: 1449641684}
   m_Layer: 5
   m_Name: Little Tokyo
   m_TagString: Untagged
@@ -1635,9 +1610,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1449641684}
-        m_MethodName: loadNewScene
-        m_Mode: 5
+      - m_Target: {fileID: 752807265}
+        m_MethodName: LoadLittleTokyo
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1681,17 +1656,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1449641679}
---- !u!114 &1449641684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1449641679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1d7f4f0d3b505c4187521140861c3b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1551256498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,7 +1667,6 @@ GameObject:
   - 222: {fileID: 1551256503}
   - 114: {fileID: 1551256502}
   - 114: {fileID: 1551256501}
-  - 114: {fileID: 1551256500}
   m_Layer: 5
   m_Name: Big Air
   m_TagString: Untagged
@@ -1730,17 +1693,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
---- !u!114 &1551256500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1551256498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1d7f4f0d3b505c4187521140861c3b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1551256501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1780,15 +1732,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1551256500}
-        m_MethodName: loadNewScene
-        m_Mode: 5
+      - m_Target: {fileID: 752807265}
+        m_MethodName: LoadBigAir
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: BigAir
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1991,7 +1943,6 @@ GameObject:
   - 222: {fileID: 2012542187}
   - 114: {fileID: 2012542186}
   - 114: {fileID: 2012542185}
-  - 114: {fileID: 2012542189}
   m_Layer: 5
   m_Name: Bunny Hill
   m_TagString: Untagged
@@ -2038,15 +1989,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2012542189}
-        m_MethodName: loadNewScene
-        m_Mode: 5
+      - m_Target: {fileID: 752807265}
+        m_MethodName: LoadBunnyHill
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Bunny_Hill
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -2103,17 +2054,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
---- !u!114 &2012542189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2012542184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1d7f4f0d3b505c4187521140861c3b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2059628027
 GameObject:
   m_ObjectHideFlags: 0

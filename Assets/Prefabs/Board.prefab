@@ -94,7 +94,6 @@ GameObject:
   - 54: {fileID: 5454614}
   - 114: {fileID: 11471924}
   - 114: {fileID: 11405664}
-  - 114: {fileID: 11447936}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -2080,18 +2079,6 @@ MonoBehaviour:
   - {fileID: 178912}
   - {fileID: 104828}
   - {fileID: 175040}
---- !u!114 &11447936
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 107134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e441fba211f88433da95d2c22b0ae5df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_velocityCap: 25
 --- !u!114 &11471924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2103,6 +2090,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434a7ae2a0fe21841a7b37b8fffb643e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hAxis: 0
+  vAxis: 0
+  rightHAxis: 0
+  rightVAxis: 0
+  canMove: 1
   deadZone: .200000003
   torque: 80
   flippingTorque: 80
@@ -2111,6 +2103,7 @@ MonoBehaviour:
   jumpHeight: 250
   _anim: {fileID: 9555420}
   oneTimeEvents: 0
+  m_velocityCap: 25
 --- !u!114 &11487828
 MonoBehaviour:
   m_ObjectHideFlags: 1

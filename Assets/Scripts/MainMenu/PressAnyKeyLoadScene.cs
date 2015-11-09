@@ -5,7 +5,6 @@ using System.Collections;
 public class PressAnyKeyLoadScene : MonoBehaviour {
 
     private Text m_anyKeyText;
-    public string sceneToLoad;
 
 	// Use this for initialization
 	void Start () {
@@ -29,19 +28,5 @@ public class PressAnyKeyLoadScene : MonoBehaviour {
 
 	}
 	
-	// Update is called once per frame
-	void Update () {
 
-        //Check if there is any input so we can load the Main Menu
-        if (Input.anyKey)
-        {
-            loadSceneNow();
-        }
-
-    }
-
-    private void loadSceneNow()
-    {
-        Application.LoadLevel(sceneToLoad);
-    }
 }
