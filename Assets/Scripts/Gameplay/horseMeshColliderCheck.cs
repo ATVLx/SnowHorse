@@ -58,6 +58,15 @@ public class horseMeshColliderCheck : MonoBehaviour {
         //set the time scale back to normal
         Time.timeScale = 1.0f;
 
+        //make the music start again
+        GameObject _music = GameObject.Find("_Music");
+        if (_music != null)
+        {
+            _music.GetComponent<musicControls>().musicPlay();
+            Debug.Log("Starting Music Again");
+        }
+
+
         //load the level again 
         LoadNewLevelAsync.LoadLevelAsyncNow(Application.loadedLevelName);
     }

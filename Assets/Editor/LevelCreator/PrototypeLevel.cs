@@ -53,10 +53,12 @@ public class PrototypeLevel : EditorWindow {
             {
                 _board = Instantiate(Board, new Vector3(20.0f, 16.59f, 0), Quaternion.identity) as GameObject;
                 _board.name = "Board";
+                _board.GetComponent<BoardController>().canMove = false;
             }
             else
             {
                 _board = GameObject.Find("Board");
+                _board.GetComponent<BoardController>().canMove = false;
                 Debug.Log("<color=green>Board Already Exists</color>");
             }
 

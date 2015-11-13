@@ -36929,6 +36929,10 @@ Prefab:
       propertyPath: m_trickController
       value: 
       objectReference: {fileID: 1489552890}
+    - target: {fileID: 11471924, guid: eb44f556d92f5ed419cb83d3cf2600c6, type: 2}
+      propertyPath: canMove
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb44f556d92f5ed419cb83d3cf2600c6, type: 2}
   m_IsPrefabParent: 0
@@ -39464,7 +39468,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22492852, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 22492852, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -39505,10 +39509,6 @@ Prefab:
     - target: {fileID: 22492852, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 149228, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6f3d3a40037da84ebb1d1c7a664f3fe, type: 2}
