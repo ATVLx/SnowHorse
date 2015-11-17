@@ -68,4 +68,14 @@ public class LoadLevelGameplayLevels : MonoBehaviour {
             LoadNewLevelAsync.LoadLevelAsyncNow("MainMenu");
         }
     }
+
+    public void LoadCave()
+    {
+        if (hasPressedButton == false)
+        {
+            hasPressedButton = true;
+            LoadNewLevelAsync.LoadLevelAsyncNow("Cave");
+        }
+    }
+
 }
