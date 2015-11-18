@@ -56,7 +56,7 @@ LightmapSettings:
     serializedVersion: 3
     m_Resolution: 2
     m_BakeResolution: 20
-    m_TextureWidth: 256
+    m_TextureWidth: 1024
     m_TextureHeight: 1024
     m_AOMaxDistance: 1
     m_Padding: 2
@@ -66,10 +66,10 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 1
     m_FinalGatherRayCount: 512
-    m_ReflectionCompression: 1
-  m_LightmapSnapshot: {fileID: 112000001, guid: 8f667728ec183ce409170eb20acc7fe4,
+    m_ReflectionCompression: 2
+  m_LightmapSnapshot: {fileID: 112000003, guid: 8f667728ec183ce409170eb20acc7fe4,
     type: 2}
-  m_RuntimeCPUUsage: 75
+  m_RuntimeCPUUsage: 25
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1358,7 +1358,7 @@ RectTransform:
   - {fileID: 738459285}
   - {fileID: 1805093130}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 48
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1695,7 +1695,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 35
 --- !u!1 &260825731
 GameObject:
   m_ObjectHideFlags: 0
@@ -3323,11 +3323,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 4fb3538d470f43f4391fda74ded8b5dd, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 4fb3538d470f43f4391fda74ded8b5dd, type: 2}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4fb3538d470f43f4391fda74ded8b5dd, type: 2}
@@ -13282,7 +13282,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1928770945
 Transform:
