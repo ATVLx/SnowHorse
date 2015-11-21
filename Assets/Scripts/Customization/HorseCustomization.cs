@@ -23,7 +23,7 @@ public class HorseCustomization : MonoBehaviour {
         if (File.Exists(Application.dataPath + "/horseCustomization.json"))
         {
             //load the file
-            JsonUtility.FromJson<HorseCustomization>(Application.dataPath + "/horseCustomization.json");
+            //JsonUtility.FromJson<HorseCustomization>(Application.dataPath + "/horseCustomization.json");
             Debug.Log("Loaded: " + jsonData);
         }
         else
@@ -36,7 +36,7 @@ public class HorseCustomization : MonoBehaviour {
 
     public void setCustomizationToFile()
     {
-        jsonData = JsonUtility.ToJson(this, true);
+        //jsonData = JsonUtility.ToJson(this, true);
         File.WriteAllText(Application.dataPath + "/horseCustomization.json", jsonData);
 
         Debug.Log("Saved Data: " + jsonData);
