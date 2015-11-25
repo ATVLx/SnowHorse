@@ -12,9 +12,8 @@ public class changeScene : MonoBehaviour {
     {
         //change the time scale back to normal
         Time.timeScale = 1.0f;
-        playMusicAgain();
+        //playMusicAgain();
         LoadNewLevelAsync.LoadLevelAsyncNow(scene);
-        //Application.LoadLevel(scene);
     }
 
     public void loadSameScene()

@@ -19,7 +19,7 @@ public class LoadNewLevelAsync : MonoBehaviour {
     public void StartLoadScene () {
 
         DontDestroyOnLoad(this.gameObject);
-
+        Debug.Log("Loading screen");
         //load the blank scene with the loading animation
         Application.LoadLevel(loadScreenLevel);
         //start the level async operation
@@ -28,13 +28,13 @@ public class LoadNewLevelAsync : MonoBehaviour {
 
     private void AsyncLevelAfterLoadingScreen()
     {
-
+        
         StartCoroutine(StartAsyncLoadLevel());
     }
 
     IEnumerator StartAsyncLoadLevel()
     {
-
+        Debug.Log("Start Async Loading");
         async = Application.LoadLevelAsync(levelToLoad);
         yield return async;
         Debug.Log("Loading" + levelToLoad + "complete");
