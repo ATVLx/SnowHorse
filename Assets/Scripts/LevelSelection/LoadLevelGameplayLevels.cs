@@ -20,7 +20,7 @@ public class LoadLevelGameplayLevels : MonoBehaviour {
         if (hasPressedButton == false)
         {
             hasPressedButton = true;
-            LoadNewLevelAsync.LoadLevelAsyncNow("Bunny_Hill");
+            LoadNewLevelAsync.LoadLevelAsyncNow("Bunny_Hill_decorated");
         }
     }
 
@@ -48,6 +48,15 @@ public class LoadLevelGameplayLevels : MonoBehaviour {
         {
             hasPressedButton = true;
             LoadNewLevelAsync.LoadLevelAsyncNow("LittleTokyo");
+        }
+    }
+
+    public void LoadTrickyLane()
+    {
+        if (hasPressedButton == false)
+        {
+            hasPressedButton = true;
+            LoadNewLevelAsync.LoadLevelAsyncNow("TrickyLane");
         }
     }
 

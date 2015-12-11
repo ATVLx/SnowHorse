@@ -44,7 +44,7 @@ public class horseMeshColliderCheck : MonoBehaviour {
 
             //slow down time
             Debug.Log("Slowing Down Time");
-            Time.timeScale = 0.45f;
+            //Time.timeScale = 0.45f;
 
             Debug.Log("Hit");
 
@@ -56,7 +56,7 @@ public class horseMeshColliderCheck : MonoBehaviour {
     private void restartLevel()
     {
         //set the time scale back to normal
-        Time.timeScale = 1.0f;
+        //Time.timeScale = 1.0f;
 
         //make the music start again
         GameObject _music = GameObject.Find("_Music");
