@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class changeScene : MonoBehaviour {
@@ -21,7 +22,9 @@ public class changeScene : MonoBehaviour {
         //change the time scale back to normal
         Time.timeScale = 1.0f;
         playMusicAgain();
-        Application.LoadLevel(Application.loadedLevelName);
+        Scene _thisScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(_thisScene.name);
+        //Application.LoadLevel(Application.loadedLevelName);
     }
 
     public void playMusicAgain()

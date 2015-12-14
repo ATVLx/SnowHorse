@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class LoadLevelGameplayLevels : MonoBehaviour {
@@ -20,7 +21,8 @@ public class LoadLevelGameplayLevels : MonoBehaviour {
         if (hasPressedButton == false)
         {
             hasPressedButton = true;
-            LoadNewLevelAsync.LoadLevelAsyncNow("Bunny_Hill_decorated");
+            SceneManager.LoadSceneAsync("Bunny_Hill_decorated");
+            //LoadNewLevelAsync.LoadLevelAsyncNow();
         }
     }
 
@@ -29,7 +31,8 @@ public class LoadLevelGameplayLevels : MonoBehaviour {
         if (hasPressedButton == false)
         {
             hasPressedButton = true;
-            LoadNewLevelAsync.LoadLevelAsyncNow("BigAir");
+            SceneManager.LoadSceneAsync("BigAir");
+            //LoadNewLevelAsync.LoadLevelAsyncNow("BigAir");
         }
     }
 
@@ -38,7 +41,8 @@ public class LoadLevelGameplayLevels : MonoBehaviour {
         if (hasPressedButton == false)
         {
             hasPressedButton = true;
-            LoadNewLevelAsync.LoadLevelAsyncNow("SnowPark");
+            SceneManager.LoadSceneAsync("SnowPark");
+            //LoadNewLevelAsync.LoadLevelAsyncNow("SnowPark");
         }
     }
 
@@ -47,7 +51,18 @@ public class LoadLevelGameplayLevels : MonoBehaviour {
         if (hasPressedButton == false)
         {
             hasPressedButton = true;
-            LoadNewLevelAsync.LoadLevelAsyncNow("LittleTokyo");
+            SceneManager.LoadSceneAsync("LittleTokyo");
+            //LoadNewLevelAsync.LoadLevelAsyncNow("LittleTokyo");
+        }
+    }
+
+    public void LoadTripleLane ()
+    {
+        if (hasPressedButton == false)
+        {
+            hasPressedButton = true;
+            SceneManager.LoadSceneAsync("TripleLane");
+            //LoadNewLevelAsync.LoadLevelAsyncNow("TripleLane");
         }
     }
 
@@ -56,7 +71,8 @@ public class LoadLevelGameplayLevels : MonoBehaviour {
         if (hasPressedButton == false)
         {
             hasPressedButton = true;
-            LoadNewLevelAsync.LoadLevelAsyncNow("TrickyLane");
+            SceneManager.LoadSceneAsync("Tricky_Lane");
+            //LoadNewLevelAsync.LoadLevelAsyncNow("Tricky_Lane");
         }
     }
 
@@ -65,7 +81,8 @@ public class LoadLevelGameplayLevels : MonoBehaviour {
         if (hasPressedButton == false)
         {
             hasPressedButton = true;
-            LoadNewLevelAsync.LoadLevelAsyncNow("X_Derby");
+            SceneManager.LoadSceneAsync("X_Derby");
+            //LoadNewLevelAsync.LoadLevelAsyncNow("X_Derby");
         }
     }
 
@@ -74,7 +91,8 @@ public class LoadLevelGameplayLevels : MonoBehaviour {
         if (hasPressedButton == false)
         {
             hasPressedButton = true;
-            LoadNewLevelAsync.LoadLevelAsyncNow("MainMenu");
+            SceneManager.LoadSceneAsync("MainMenu");
+            //LoadNewLevelAsync.LoadLevelAsyncNow("MainMenu");
         }
     }
 
@@ -83,7 +101,8 @@ public class LoadLevelGameplayLevels : MonoBehaviour {
         if (hasPressedButton == false)
         {
             hasPressedButton = true;
-            LoadNewLevelAsync.LoadLevelAsyncNow("Cave");
+            SceneManager.LoadSceneAsync("Cave");
+            //LoadNewLevelAsync.LoadLevelAsyncNow("Cave");
         }
     }
 

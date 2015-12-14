@@ -5,6 +5,8 @@
 using UnityEngine;
 using UnityEditor;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using UnityEditor.SceneManagement;
 
 public class AutoSave : EditorWindow {
 
@@ -46,10 +48,15 @@ public class AutoSave : EditorWindow {
 
             if (EditorApplication.timeSinceStartup > nextSaveTime)
             {
-                var path = EditorApplication.currentScene;
+
+                Scene _currentScene = EditorSceneManager.GetActiveScene();
+                var path = _currentScene.path;
+                //Debug.Log(path);
+                
 
                 //EditorApplication.SaveScene(path, true);
-                EditorApplication.SaveScene();
+                //EditorApplication.SaveScene();
+                EditorSceneManager.SaveScene(_currentScene);
                 EditorApplication.SaveAssets();
                 Debug.Log("Saved Scene: " + path);
 

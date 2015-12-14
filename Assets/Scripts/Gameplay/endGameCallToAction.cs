@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class endGameCallToAction : MonoBehaviour {
@@ -14,7 +15,8 @@ public class endGameCallToAction : MonoBehaviour {
         if (Input.anyKey)
         {
             Debug.Log("Loading the Level Selection Screen");
-            Application.LoadLevel("Level Selection");
+            SceneManager.LoadScene("Level Selection");
+            //Application.LoadLevel("Level Selection");
         }
 
 	}

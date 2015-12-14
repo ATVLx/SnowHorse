@@ -4,8 +4,8 @@
 /  4. Loads into a blank Scene called Loading Screen
 /  5. Loads the level Async
 */
-
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class LoadNewLevelAsync : MonoBehaviour {
@@ -21,7 +21,8 @@ public class LoadNewLevelAsync : MonoBehaviour {
         DontDestroyOnLoad(this.gameObject);
         Debug.Log("Loading screen");
         //load the blank scene with the loading animation
-        Application.LoadLevel(loadScreenLevel);
+        SceneManager.LoadScene(loadScreenLevel);
+        //Application.LoadLevel(loadScreenLevel);
         //start the level async operation
         Invoke("AsyncLevelAfterLoadingScreen", 2.0f);
     }
