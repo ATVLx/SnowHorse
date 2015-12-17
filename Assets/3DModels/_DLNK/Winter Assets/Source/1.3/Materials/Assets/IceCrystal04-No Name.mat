@@ -7,10 +7,10 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: IceCrystal04-No Name
-  m_Shader: {fileID: 4800000, guid: f1e6229716f57f1419d9923e45dfcbd9, type: 3}
+  m_Shader: {fileID: 4800000, guid: 963484209d11fd7f110076aa44295342, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -19,7 +19,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 6184d1f411fff804f860e436670cc853, type: 3}
+          m_Texture: {fileID: 2800000, guid: c51a349be3fe17d4b941428290b6dbbf, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -27,20 +27,6 @@ Material:
           name: _BumpMap
         second:
           m_Texture: {fileID: 2800000, guid: 163123f5fc1136345aed0beb51bf6358, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _IBLSpecular
-        second:
-          m_Texture: {fileID: 8900000, guid: 9b2d3ffa79837de4eb9a3cc995c07db3, type: 2}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _IBLDiffuse
-        second:
-          m_Texture: {fileID: 8900000, guid: 9b2d3ffa79837de4eb9a3cc995c07db3, type: 2}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -71,27 +57,81 @@ Material:
           m_Texture: {fileID: 2800000, guid: fec84a827e085b34cbb800d5b17da482, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _IBLSpecular
+        second:
+          m_Texture: {fileID: 8900000, guid: 9b2d3ffa79837de4eb9a3cc995c07db3, type: 2}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _IBLDiffuse
+        second:
+          m_Texture: {fileID: 8900000, guid: 9b2d3ffa79837de4eb9a3cc995c07db3, type: 2}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
           name: _Cutoff
-        second: .5
+        second: 0.5
       data:
         first:
           name: _Shininess
-        second: .255689025
+        second: 0.25568902
       data:
         first:
           name: _Gloss
-        second: .339285731
-      data:
-        first:
-          name: _BumpPower
-        second: .829999983
+        second: 0.33928573
       data:
         first:
           name: _SpecularPower
-        second: .5
+        second: 0.5
+      data:
+        first:
+          name: _TopDownMask
+        second: 0.8214286
+      data:
+        first:
+          name: _1stVelocity
+        second: 0.1
+      data:
+        first:
+          name: _2ndVelocity
+        second: 1
+      data:
+        first:
+          name: _UpVelocity
+        second: 0
+      data:
+        first:
+          name: _UpMoveRange
+        second: 0
+      data:
+        first:
+          name: _RefractionPower
+        second: 0.02
+      data:
+        first:
+          name: _OpacityPower
+        second: 1.7
+      data:
+        first:
+          name: _FresnelPower
+        second: -0.99
+      data:
+        first:
+          name: _FresnelRim
+        second: 0.88
+      data:
+        first:
+          name: _UpmoveMix
+        second: 0
+      data:
+        first:
+          name: _BumpPower
+        second: 0.83
       data:
         first:
           name: _SpecularIntensityIBL
@@ -111,61 +151,25 @@ Material:
       data:
         first:
           name: _TransparentMix
-        second: .589285731
-      data:
-        first:
-          name: _TopDownMask
-        second: .821428597
-      data:
-        first:
-          name: _1stVelocity
-        second: .100000001
-      data:
-        first:
-          name: _2ndVelocity
-        second: 1
-      data:
-        first:
-          name: _UpVelocity
-        second: 0
-      data:
-        first:
-          name: _UpMoveRange
-        second: 0
-      data:
-        first:
-          name: _RefractionPower
-        second: .0199999996
-      data:
-        first:
-          name: _OpacityPower
-        second: 1.70000005
-      data:
-        first:
-          name: _FresnelPower
-        second: -.99000001
-      data:
-        first:
-          name: _FresnelRim
-        second: .879999995
-      data:
-        first:
-          name: _UpmoveMix
-        second: 0
+        second: 0.58928573
       data:
         first:
           name: _Refraction
-        second: .379999995
+        second: 0.38
       data:
         first:
           name: _NormalRefraction
-        second: 1.22000003
+        second: 1.22
+      data:
+        first:
+          name: _BumpAmt
+        second: 128
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: .544982672, g: .642327785, b: .926470578, a: .160784319}
+        second: {r: 0.5449827, g: 0.6423278, b: 0.9264706, a: 0.16078432}
       data:
         first:
           name: _SpecColor
-        second: {r: .5, g: .5, b: .5, a: 0}
+        second: {r: 0.5, g: 0.5, b: 0.5, a: 0}
