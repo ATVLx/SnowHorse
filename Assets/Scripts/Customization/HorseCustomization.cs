@@ -13,7 +13,6 @@ public class HorseCustomization : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
 
 
 	}
