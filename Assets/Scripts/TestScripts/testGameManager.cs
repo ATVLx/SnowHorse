@@ -10,8 +10,8 @@ public class testGameManager : MonoBehaviour {
 
 		GameManager.Instance.Setup();
 		string datebooted = GameManager.Instance.currentPlayedTime;
-		GameManager.Instance.GameData.Add("dateplayed", datebooted);
-		GameManager.Instance.saveToJSON();
+		//GameManager.Instance.GameData.Add("dateplayed", datebooted);
+		//GameManager.Instance.saveToJSON();
 	}
 
 	void test()
