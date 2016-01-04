@@ -18,11 +18,18 @@ public class GameManager
 {
 
 	//game data keys
+	#region gamedata keys
 
 	/// <summary>
 	/// A GameData key for Last Time Played
 	/// </summary>
 	public string lasttimeplayed = "lasttimeplayed";
+	/// <summary>
+	/// The current highscore of the user saved locally
+	/// </summary>
+	public string currenthighscore = "highscore";
+
+	#endregion
 
 
     /// Get current time at Game Boot. Use this time to compare agaist the last time played
@@ -67,9 +74,38 @@ public class GameManager
 
     }
 
+	public void saveHighScore(long score)
+	{
+		//check if the key exists
+		if(GameData.ContainsKey(currenthighscore))
+		{
+			if((long)GameData[currenthighscore] < score)
+			{
+				GameData[currenthighscore] = score;
+				Debug.Log("Over wrote the highscore");
+			}
+			else
+			{
+				Debug.Log("Score passed wasn't larger than saved score");
+			}
+		}
+		else
+		{
+			if((long)GameData[currenthighscore] < score)
+			{
+				GameData.Add(currenthighscore, score);
+				Debug.Log("Added a new highscore");
+			}
+			else
+			{
+				Debug.Log("Score passed wasn't larger than saved score");
+			}
+		}
+	}
+
     //get the date right now in ticks
     //this will be used to compared against the saved date
-    private void getTicksOnStart()
+	public void checkLastTimePlayed()
     {
         //get the date right now and convert it to ticks
         string currentDate = DateTime.Now.Ticks.ToString();
@@ -127,7 +163,7 @@ public class GameManager
         if (File.Exists(mobileDataPath))
         {
             //pull the json data from the file
-            readJSONFromFile(mobileDataPath);
+            //readJSONFromFile(mobileDataPath);
 			//read the json data
 			string readJSON = File.ReadAllText(mobileDataPath);
 			//set the json to a global variable in the gamemanager
@@ -139,7 +175,6 @@ public class GameManager
         {
             //create the directory
             Directory.CreateDirectory(Application.persistentDataPath + "/" + "SnowHorse");
-            //File.WriteAllText(standaloneDataPath, "");
         }
 
 #elif UNITY_STANDALONE
@@ -159,7 +194,6 @@ public class GameManager
 			string readJSON = File.ReadAllText(standaloneDataPath);
 			//set the json to a global variable in the gamemanager
 			readfromfilejson = readJSON;
-
 			//read data from location then pass to method below: jsonString
 			GameData = Json.Deserialize(readfromfilejson) as Dictionary<string,object>;
 
@@ -168,14 +202,14 @@ public class GameManager
         {
             //create the directory
             Directory.CreateDirectory(Application.persistentDataPath + "/" + "SnowHorse");
-            //File.WriteAllText(standaloneDataPath, "");
         }
 
 #endif
-
+		//mark that we have loaded the data
 		hasDataLoaded = true;
 
-		getTicksOnStart();
+		//start the 24 hour check 
+		checkLastTimePlayed();
     }
 		
 
