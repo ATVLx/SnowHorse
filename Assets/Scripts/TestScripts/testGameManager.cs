@@ -9,18 +9,26 @@ public class testGameManager : MonoBehaviour {
 	void Start () {
 
 		GameManager.Instance.Setup();
-		string datebooted = GameManager.Instance.currentPlayedTime;
-		//GameManager.Instance.GameData.Add("dateplayed", datebooted);
-		//GameManager.Instance.saveToJSON();
+		//Debug.Log(GameManager.Instance.hasDataLoaded);
+
+		//GameManager.Instance.GameData.Add("test data", "this is data!");
+
+		//Invoke("test", 1.0f);
 	}
 
 	void test()
 	{
-		Debug.Log("Setup Complete");
+		if(GameManager.Instance.hasDataLoaded == true)
+		{
+			GameManager.Instance.GameData.Add("test data", "this is data!");
+			Debug.Log("Setup Complete");
+		}
+		else
+		{
+			Debug.Log("Trying Again");
+			Invoke("test", 1.0f);
+		}
 	}
 
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }

@@ -17,21 +17,27 @@ using System.Collections.Generic;
 public class GameManager
 {
 
-    /// <summary>
-    /// the date time in ticks from when they last booted up the game
-    /// </summary>
-    //public string lastTimePlayedTick;
+	//game data keys
 
-    /// <summary>
+	/// <summary>
+	/// A GameData key for Last Time Played
+	/// </summary>
+	public string lasttimeplayed = "lasttimeplayed";
+
+
     /// Get current time at Game Boot. Use this time to compare agaist the last time played
-    /// </summary>
-    public string currentPlayedTime;
+    private string currentPlayedTime;
+	public bool canDoDailyChallenge = false;
 
 
-    private string mobileDataPath;
+	#region json data paths and loading variables
+    
+	private string mobileDataPath;
     private string standaloneDataPath;
-    private bool dataLoaded = false;
+    public bool hasDataLoaded = false;
     private string readfromfilejson;
+
+	#endregion
 
 	public Dictionary<string,object> GameData = new Dictionary<string, object>();
 
@@ -59,9 +65,6 @@ public class GameManager
         //get all the data paths and start reading json
         startjsonreading();
 
-        //get the time it was when the application booted
-        getTicksOnStart();
-
     }
 
     //get the date right now in ticks
@@ -74,6 +77,40 @@ public class GameManager
         //set the date we just got in ticks to the public variable
 
         currentPlayedTime = currentDate;
+
+		if(GameData.ContainsKey(lasttimeplayed))
+		{
+			//key exists 
+			//set the data to a public variable
+			long dicTimeStamp = (long) GameData[lasttimeplayed];
+			//check if difference from now and the last time stamp saved is 24 hours
+			long subtractedValue = dicTimeStamp - Convert.ToInt64(currentPlayedTime);
+			if(subtractedValue >= TimeSpan.TicksPerDay)
+			{
+				//unlock the daily challenge
+				canDoDailyChallenge = true;
+				Debug.Log("Can Do Daily Challenge: " + canDoDailyChallenge);
+			}
+			else
+			{
+				//lock the daily challenge because they are back in less than 24 hours
+				canDoDailyChallenge = false;
+				Debug.Log("Can Do Daily Challenge: " + canDoDailyChallenge);
+			}
+			
+
+		}
+		else
+		{
+			//key doesn't exist
+			//take the time we just got and make a key for it
+			GameData.Add(lasttimeplayed, Convert.ToInt64(currentPlayedTime));
+			//Unlock the daily challenge
+			//this is their first time playing. Allow them to play the daily challenge
+			canDoDailyChallenge = true;
+			Debug.Log("Can Do Daily Challenge: " + canDoDailyChallenge);
+		}
+
     }
 
     #region json data reading
@@ -91,50 +128,56 @@ public class GameManager
         {
             //pull the json data from the file
             readJSONFromFile(mobileDataPath);
+			//read the json data
+			string readJSON = File.ReadAllText(mobileDataPath);
+			//set the json to a global variable in the gamemanager
+			readfromfilejson = readJSON;
+			//read data from location then pass to method below: jsonString
+			GameData = Json.Deserialize(readfromfilejson) as Dictionary<string,object>;
         }
         else
         {
             //create the directory
             Directory.CreateDirectory(Application.persistentDataPath + "/" + "SnowHorse");
-            File.WriteAllText(standaloneDataPath, "new save data here");
+            //File.WriteAllText(standaloneDataPath, "");
         }
+
 #elif UNITY_STANDALONE
 
         standaloneDataPath = Application.persistentDataPath + "/" + "SnowHorse/" + "gamedata.json";
 
+		//Debug.Log("checking if the path exists");
+
         //check to see if directory and file exists
         if (File.Exists(standaloneDataPath))
         {
+			//Debug.Log("path exists");
+
             //pull the json data from the file
-            readJSONFromFile(standaloneDataPath);
+            //readJSONFromFile(standaloneDataPath);
+			//read the json data
+			string readJSON = File.ReadAllText(standaloneDataPath);
+			//set the json to a global variable in the gamemanager
+			readfromfilejson = readJSON;
+
+			//read data from location then pass to method below: jsonString
+			GameData = Json.Deserialize(readfromfilejson) as Dictionary<string,object>;
+
         }
         else
         {
             //create the directory
             Directory.CreateDirectory(Application.persistentDataPath + "/" + "SnowHorse");
-            File.WriteAllText(standaloneDataPath, "new save data here");
+            //File.WriteAllText(standaloneDataPath, "");
         }
 
 #endif
 
+		hasDataLoaded = true;
+
+		getTicksOnStart();
     }
-
-    /// <summary>
-    /// Reads the given json from the location send
-    /// @ param - location - the location to read the json
-    /// </summary>
-    /// <param name="location"></param>
-    private void readJSONFromFile(string location)
-    {
-        //read the json data
-        string readJSON = File.ReadAllText(location);
-        //set the json to a global variable in the gamemanager
-        readfromfilejson = readJSON;
-        //convert the json to a dictionary
-        getFromJSON();
-
-    }
-
+		
 
 
 	/// <summary>
@@ -143,53 +186,38 @@ public class GameManager
 	/// </summary>
 	public void saveToJSON()
 	{
-		var str = Json.Serialize(GameData);
+		if(hasDataLoaded)
+		{
 
-        //save the game data to their given platforms
-#if UNITY_IOS || UNITY_ANDROID
-        File.WriteAllText(mobileDataPath, str);
-#elif UNITY_STANDALONE
-        File.WriteAllText(standaloneDataPath, str);
-#endif
-        Debug.Log(str);
+			var str = Json.Serialize(GameData);
+
+	        //save the game data to their given platforms
+	#if UNITY_IOS || UNITY_ANDROID
+			File.WriteAllText(mobileDataPath, str);
+			Debug.Log(standaloneDataPath);
+	#elif UNITY_STANDALONE
+	        File.WriteAllText(standaloneDataPath, str);
+			Debug.Log(standaloneDataPath);
+
+	#endif
+
+			Debug.Log("JSON Data :" + str);
+		}
+
+
 	}
 
-    /// <summary>
-    /// Gets the JSON string and Deserializes it to the GameData Dictionary
-    /// </summary>
-    /// <param name="jsonString">Json string.</param>
-	private void getFromJSON()
-    {
-		//read data from location then pass to method below: jsonString
-		GameData = Json.Deserialize(readfromfilejson) as Dictionary<string,object>;
-        if(GameData != null)
-        {
-            dataLoaded = true;
-        }
-    }
+	/// <summary>
+	/// Deletes the file at a given location
+	/// </summary>
+	/// <param name="location">Location - the location of the file</param>
+	public void deleteFile(string location)
+	{
+		File.Delete(location);
+	}
 
     #endregion
 
-    /// <summary>
-    /// saves the json data when the game manager is disabled
-    /// </summary>
-    public void OnDisable()
-	{
-        //save the game data we have since the application is disabled
-        saveToJSON();
-		Debug.Log("OnDisable called");
-	}
-
-    /// <summary>
-    /// saves the json data when the game manager is destroyed
-    /// </summary>
-	public void OnDestroy()
-	{
-        //save the game data we have since the application is being destroyed
-        saveToJSON();
-
-        Debug.Log("Being Destoryed");
-	}
 
 
 }
