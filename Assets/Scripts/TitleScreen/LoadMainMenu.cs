@@ -13,12 +13,16 @@ public class LoadMainMenu : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        //Check if there is any input so we can load the Main Menu
-        if (Input.anyKey && hasPressedButton == false)
-        {
-            hasPressedButton = true;
-            LoadNewLevelAsync.LoadLevelAsyncNow("MainMenu");
-        }
+		//check if the user has their game data loaded before allowing them to press any button
+		if(GameManager.Instance.hasDataLoaded == true)
+		{
+	        //Check if there is any input so we can load the Main Menu
+	        if (Input.anyKey && hasPressedButton == false)
+	        {
+	            hasPressedButton = true;
+	            LoadNewLevelAsync.LoadLevelAsyncNow("MainMenu");
+	        }
+		}
 
 
     }

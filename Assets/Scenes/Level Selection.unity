@@ -781,7 +781,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 52.660282
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -816,7 +816,7 @@ Skybox:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 422432960}
   m_Enabled: 1
-  m_CustomSkybox: {fileID: 2100000, guid: 20e05688c23ec244e9a4ccc7654c6afe, type: 2}
+  m_CustomSkybox: {fileID: 2100000, guid: 92975f25f84e84919a1dad3465dbdee2, type: 2}
 --- !u!1 &544672445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,6 +1229,7 @@ GameObject:
   - 222: {fileID: 785659448}
   - 114: {fileID: 785659447}
   - 114: {fileID: 785659446}
+  - 114: {fileID: 785659449}
   m_Layer: 5
   m_Name: Daily Challenge
   m_TagString: Untagged
@@ -1339,6 +1340,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 785659444}
+--- !u!114 &785659449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 785659444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dca43cdc2897405db265fc32a5884b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &864706186
 GameObject:
   m_ObjectHideFlags: 0
