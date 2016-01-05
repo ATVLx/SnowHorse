@@ -28,6 +28,10 @@ public class GameManager
 	/// The current highscore of the user saved locally
 	/// </summary>
 	public string currenthighscore = "highscore";
+	/// <summary>
+	/// The current horse the player is using
+	/// </summary>
+	public string currentHorse = "currenthorse";
 
 	#endregion
 
@@ -72,6 +76,13 @@ public class GameManager
         //get all the data paths and start reading json
         startjsonreading();
 
+		//check if there is a current horse
+		//if not add the normal horse
+		if(!GameData.ContainsKey(currentHorse))
+		{
+			GameData.Add(currentHorse, "normal");
+		}
+
     }
 
 	public void saveHighScore(long score)
@@ -100,6 +111,24 @@ public class GameManager
 			{
 				Debug.Log("Score passed wasn't larger than saved score");
 			}
+		}
+	}
+
+	/// <summary>
+	/// Gets the current horse name
+	/// </summary>
+	/// <returns>The current horse name as string</returns>
+	public string getCurrentHorse()
+	{
+		if(GameData.ContainsKey(currentHorse))
+		{
+			string str = (string)GameData[currentHorse];
+			return str;
+		}
+		else
+		{
+			//return the normal horse name so we load the default horse
+			return "normal";
 		}
 	}
 

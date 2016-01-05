@@ -39,6 +39,9 @@ public class BoardController : MonoBehaviour {
     [Header("Velocity Cap")]
     public float m_velocityCap = 25.0f;
 
+	[Header("Camera to Shake")]
+	public GameObject m_camera;
+
     // Use this for initialization
     void Start () {
 
@@ -46,6 +49,13 @@ public class BoardController : MonoBehaviour {
         startPosition = transform;
         //get the rigidbody
         _rigid = GetComponent<Rigidbody>();
+
+		//get the camera in the scene
+		m_camera = GameObject.Find("Main Camera");
+		if (m_camera == null)
+		{
+			Debug.Log("<color=red>Couldn't find Main Camera</color>");
+		}
 
         //get the trickpointcontroller
         _trickController = GameObject.Find("Canvas").GetComponent<trickPointController>();
@@ -96,11 +106,25 @@ public class BoardController : MonoBehaviour {
                 else
                 {
 
+					//camera shake if our point value is legit
+					//TODO: Took this out because it doesn't work at all
+					/*
+					if(_trickController.m_trickValue >= 1000)
+					{
+						iTween.ShakePosition(m_camera, new Vector3(0.01f,
+							0.01f,
+							0.01f),
+							0.1f);
+					}
+					*/
+
                     //No we didn't hit a rail! We touched the ground!!
                     _trickController.endTrickTimer();
                     _trickController.m_trickValue = 0;
                     _trickController.m_numOfTricks = 1;
                     isGrounded = true;
+
+
 
                     //give back rail point privledges since we have landed
                     hasGivenRailPoints = false;

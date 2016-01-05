@@ -11,6 +11,15 @@ public class rotationPointDetector : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		//get the board controller
+		m_boardController = GetComponent<BoardController>();
+		if (m_boardController == null)
+		{
+			Debug.Log("<color=red>Couldn't find board controller</color>");
+		}
+
+
+		//get the trick controller
         m_trickController = GameObject.Find("Canvas").GetComponent<trickPointController>();
         if (m_trickController == null)
         {

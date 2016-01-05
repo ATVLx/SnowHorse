@@ -21,7 +21,7 @@ public class anyButtonShakeBreak : MonoBehaviour {
 			hasActivated = true;
 			actionText.SetActive(false);
 			confetti.SetActive(true);
-			iTween.ShakePosition(this.gameObject, new Vector3(0.3f, 0.3f, 0.3f), 0.5f);
+			iTween.ShakePosition(this.gameObject, new Vector3(0.2f, 0.2f, 0.2f), 0.5f);
 			Invoke("destroyPackage", 0.5f);
 		}
 	

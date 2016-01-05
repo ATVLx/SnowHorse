@@ -43,7 +43,7 @@ public class horseMeshColliderCheck : MonoBehaviour {
             iTween.ShakePosition(_cam, new Vector3(0.1f, 0.1f, 0.1f), 0.3f);
 
             //slow down time
-            Debug.Log("Slowing Down Time");
+            //Debug.Log("Slowing Down Time");
             //Time.timeScale = 0.45f;
 
             Debug.Log("Hit");
